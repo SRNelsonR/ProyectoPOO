@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Proyecto de POO Farmacia</title>
+		<title>Formulario de Cajero</title>
 	</head>
 	<body>
-	<h1> hola </h1>
-	
+
 	</body>
 </html>
