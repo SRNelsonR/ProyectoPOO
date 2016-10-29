@@ -416,6 +416,34 @@
 
             
                 <!--seccion informativa importante -->
+                <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="../img/terceraedad.jpg" alt="...">
+                          <div class="caption">
+                            <h3>15% de descuento para la tercera edad</h3>
+                            <p>Derecho permanente para todo adulto mayor que nos visite, 5% de descuento adicional en medicamentos 
+                            para la artritis, reumatismo y cualquier otra enfermedad que genere dolor en los huesos </p>
+                            <p><a href="#" class="btn btn-primary" role="button">Descuentos de Temporada</a> 
+                          </div>
+                        </div>
+                      </div>
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="../img/cancermama.jpg" alt="...">
+                          <div class="caption">
+                            <h3>Octubre: Mes de lucha contra el cancer de mama</h3>
+                            <p>Siendo el 19 de octubre el dia mundial de la lucha contra el cancer de mama, nuestra farmacia 
+                            obsequia un 20% de descuento a todas las mujeres que hagan compras de medicamentos para combatir esta enfermedad.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Descuentos de Temporada</a> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    </div>
+
                     
                 <!--fin primera seccion informativa importante  -->
             
