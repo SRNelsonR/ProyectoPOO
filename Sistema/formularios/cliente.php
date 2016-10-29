@@ -38,137 +38,7 @@
             <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
                 <!-- main dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
-                    </a>
-                    <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-messages -->
-                </li>
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
-                    </a>
-                    <!-- dropdown tasks -->
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-tasks -->
-                </li>
+                
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -381,6 +251,8 @@
         </nav>
         <!-- end navbar side -->
         <!--  page-wrapper -->
+
+
         <div id="page-wrapper">
 
             <div class="row">
@@ -479,7 +351,9 @@
                       
                         </div>
 
-                        <!-- Left and right controls -->
+                        <!-- Left and right controls 
+                        <a class="nivo-prevNav">Prev</a>
+                        <a class="nivo-nextNav">Next</a>-->
                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                           <span class="sr-only">Previous</span>
@@ -568,6 +442,46 @@
 
     </div>
     <!-- end wrapper -->
+    <br>
+    <div class="row well">
+        <h1><br>Productos</h1>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 bg-info">
+            <div >
+                <img src="../img/m1.jpg" class="img-responsive">
+                <b>NEUROBION DC 25000 HYPAK CON 1 JERINGA</b><br>
+                <span class="label label-primary">3</span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <br>
+                VITAMINA B1 (TIAMINA)   100 MG
+                VITAMINA B6 (PIRIDOXINA)    100 MG
+                VITAMINA B12 (CIANOCOBALAMINA, HIDROXOCOBALAMINA)   25000 MCG<br>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 bg-info">
+            <div >
+                <img src="../img/m2.jpg" class="img-responsive">
+                <b>DOLO-NEUROBION DC AMPOLLAS</b><br>
+                <span class="label label-primary">3</span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <br>
+                VITAMINA B1 (TIAMINA)   100 MG
+                VITAMINA B6 (PIRIDOXINA)    100 MG
+                VITAMINA B12 (CIANOCOBALAMINA, HIDROXOCOBALAMINA)   5 MG
+                DICLOFENACO SODICO  75 MG
+                LIDOCAINA   20 MG<br>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 bg-info">
+            <div >
+                <img src="../img/m3.jpg" class="img-responsive">
+                <b>MEDICASP SHAMPOO X 130 ML</b><br>
+                <span class="label label-primary">3</span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <br>
+                SHAMPOO USO CAPILAR. USE DIARIAMENTE DURANTE 3 SEMANAS PARA ELIMINAR EL HONGO DEL CUERO CABELLUDO. LUEGO USAR 2 VECES POR SEMANA, PARA QUE LA CASPA NO REGRESE. O ACRITERIO DEL MEDICO.<br>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
 
 		<script src="../css/plugins/jquery-1.10.2.js"></script>
 	    <script src="../css/plugins/bootstrap/bootstrap.min.js"></script>
