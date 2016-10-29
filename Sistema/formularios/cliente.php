@@ -317,32 +317,32 @@
                           <div class="item active">
                             <img src="../img/1.png" alt="Chania" width="460" height="345">
                             <div class="carousel-caption">
-                              <h3>Chania</h3>
-                              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                              <h3>Visitenos</h3>
+                              <p>Contamos con personal capacitado.</p>
                             </div>
                           </div>
 
                           <div class="item">
                             <img src="../img/2.png" alt="Chania" width="460" height="345">
                             <div class="carousel-caption">
-                              <h3>Chania</h3>
-                              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                              <h3>Estamos para servirle</h3>
+                              <p>Su salud es nuestra preocupación.</p>
                             </div>
                           </div>
                         
                           <div class="item">
                             <img src="../img/3.png" alt="Flower" width="460" height="345">
                             <div class="carousel-caption">
-                              <h3>Flowers</h3>
-                              <p>Beatiful flowers in Kolymbari, Crete.</p>
+                              <h3>Cuente con nosotros</h3>
+                              <p>Le atendemos con mucho gusto y aclaramos sus dudas.</p>
                             </div>
                           </div>
 
                           <div class="item">
                             <img src="../img/4.png" alt="Flower" width="460" height="345">
                             <div class="carousel-caption">
-                              <h3>Flowers</h3>
-                              <p>Beatiful flowers in Kolymbari, Crete.</p>
+                              <h3>Atención para usted</h3>
+                              <p>No se conforme, busque lo mejor para su salud, busquenos.</p>
                             </div>
                           </div>
                       
