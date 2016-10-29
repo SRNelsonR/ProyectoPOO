@@ -107,12 +107,12 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>Perfil</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Configuracion</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="../index.php"><i class="fa fa-sign-out fa-fw"></i>Salir</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -158,7 +158,7 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
+                        <a href="#"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Información<span class="fa arrow"></span></a>
@@ -173,10 +173,10 @@
                         <!-- second-level-items -->
                     </li>
                      <li>
-                        <a href="timeline.html"><i class="fa fa-table fa-fw"></i>Facturación</a>
+                        <a href="#"><i class="fa fa-table fa-fw"></i>Facturación</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-edit fa-fw"></i>Consultas</a>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i>Consultas</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
@@ -233,10 +233,10 @@
                         <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="blank.html">Blank Page</a>
+                                <a href="#">Blank Page</a>
                             </li>
                             <li>
-                                <a href="login.html">Login Page</a>
+                                <a href="#">Login Page</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
