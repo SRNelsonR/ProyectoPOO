@@ -304,10 +304,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> INFORMACION<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">SUCURSALES</a>
+                                <a href="Sucursales.php">SUCURSALES</a>
                             </li>
                             <li>
-                                <a href="morris.html">DESCUENTOS DE TEMPORADA</a>
+                                <a href="Descuentos.php">DESCUENTOS DE TEMPORADA</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -448,7 +448,7 @@
                           <img src="../img/natural.jpg" alt="...">
                           <div class="caption">
                             <h3>Descuentos para nuestras clientas</h3>
-                            <p>super descuentos todo este mes de octubre para nuestras clientas preferenciales, Productos de uso
+                            <p>super descuentos en octubre y noviembre para nuestras clientas preferenciales, Productos de uso
                             dermatologico y de limpieza de piel, bloqueadores solares </p>
                             <p><a href="#" class="btn btn-primary" role="button">Descuentos de Temporada</a> 
                           </div>
