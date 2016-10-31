@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Formulario de Cajero</title>
-	<meta charset="utf-8">
+	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link href="../css/bootstrap.css" rel="stylesheet" />
 	    <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -12,7 +12,7 @@
 	</head>
 	<body>
 
-		<div id="wrapper">
+		<div id="wrapper">    
         <!-- navbar top -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
             <!-- navbar-header -->
@@ -417,7 +417,7 @@
             
                 <!--seccion informativa importante -->
                 <div class="row">
-                      <div class="col-sm-6 col-md-4">
+                      <div class="col-sm-2 col-md-4">
                         <div class="thumbnail">
                           <img src="../img/terceraedad.jpg" alt="...">
                           <div class="caption">
@@ -429,13 +429,27 @@
                         </div>
                       </div>
                     <div class="row">
-                      <div class="col-sm-6 col-md-4">
+                      <div class="col-sm-2 col-md-4">
                         <div class="thumbnail">
                           <img src="../img/cancermama.jpg" alt="...">
                           <div class="caption">
                             <h3>Octubre: Mes de lucha contra el cancer de mama</h3>
                             <p>Siendo el 19 de octubre el dia mundial de la lucha contra el cancer de mama, nuestra farmacia 
                             obsequia un 20% de descuento a todas las mujeres que hagan compras de medicamentos para combatir esta enfermedad.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Descuentos de Temporada</a> 
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                      <div class="col-sm-2 col-md-4">
+                        <div class="thumbnail">
+                          <img src="../img/natural.jpg" alt="...">
+                          <div class="caption">
+                            <h3>Descuentos para nuestras clientas</h3>
+                            <p>super descuentos todo este mes de octubre para nuestras clientas preferenciales, Productos de uso
+                            dermatologico y de limpieza de piel, bloqueadores solares </p>
                             <p><a href="#" class="btn btn-primary" role="button">Descuentos de Temporada</a> 
                           </div>
                         </div>
