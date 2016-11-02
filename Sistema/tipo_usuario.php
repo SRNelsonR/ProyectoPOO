@@ -19,11 +19,13 @@
     <div class="container">
        
         <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center logo-margin col-lg-4 col-md-offset-4 text-center logo-margin">
+            <div class="col-md-2 col-md-offset-2 text-center logo-margin col-lg-2 ">
+                <img src="img/razonSocial.png" alt=""/>
+            </div><br>
+            <div class="col-md-2 col-md-offset-2 text-center logo-margin col-lg-8 ">
               <!-- <img src="assets/img/logo.png" alt=""/>-->
-              <img src="img/razonSocial.png" alt=""/>
               <img src="img/logoMaxUtil.png" alt=""/>
-                </div>
+            </div>
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">                  
                     <div class="panel-heading">
@@ -32,7 +34,6 @@
                     <div class="panel-body">
                         <form role="form">
                             <fieldset>
-                                </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <a href="formularios/cliente.php" class="btn btn-lg btn-success btn-block">Cliente</a>
                                 <a href="formularios/administrador.php" class="btn btn-lg btn-success btn-block">Administrador</a>
@@ -53,3 +54,4 @@
 </body>
 
 </html>
+
