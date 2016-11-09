@@ -11,7 +11,9 @@
     <link href="../css/style.css" rel="stylesheet" />
     <link href="../css/main-style.css" rel="stylesheet" />
     <!-- Page-Level CSS -->
-    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="../css/plugins/social-buttons/social-buttons.css" rel="stylesheet" />
+
    </head>
 <body>
     <!--  wrapper -->
@@ -34,58 +36,6 @@
             <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
                 <!-- main dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
-                    </a>
-                    <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-messages -->
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
@@ -290,25 +240,25 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Mantenimiento del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/forms.html">Productos</a>
+                                <a href="../class/forms.php">Productos</a>
                             </li>
                             <li>
-                                <a href="../class/forms1.html">Clientes</a>
+                                <a href="../class/forms1.php">Clientes</a>
                             </li>
                             <li>
-                                <a href="../class/forms2.html">Empleados</a>
+                                <a href="../class/forms2.php">Empleados</a>
                             </li>
                             <li>
-                                <a href="../class/forms3.html">Laboratorios</a>
+                                <a href="../class/forms3.php">Laboratorios</a>
                             </li>
                             <li>
-                                <a href="../class/forms4.html">Presentaciones</a>
+                                <a href="../class/forms4.php">Presentaciones</a>
                             </li>
                             <li>
-                                <a href="../class/forms5.html">Dolencias</a>
+                                <a href="../class/forms5.php">Dolencias</a>
                             </li>
                             <li>
-                                <a href="../class/forms6.html">Estados</a>
+                                <a href="../class/forms6.php">Estados</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -317,10 +267,31 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Configuracion del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Flot Charts</a>
+                                <a href="../class/forms7.html">Configuracion del ISV</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Graficos del Sistema<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../class/morris.html">Ir a Graficos</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Consultas<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../class/tables.html">Precio Productos</a>
                             </li>
                             <li>
-                                <a href="morris.html">Morris Charts</a>
+                                <a href="../class/tables1.html">Productos Inexistentes</a>
+                            </li>
+                            <li>
+                                <a href="../class/tables2.html">Productos por Dolencia</a>                                
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -329,66 +300,10 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Listado de Productos</a>
+                                <a href="../class/flot.html">Listado de Productos</a>
                             </li>
                             <li>
-                                <a href="morris.html">Listado de Clientes</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                     
-                    <li>
-                        <a href="../class/tables.html"><i class="fa fa-table fa-fw"></i>Tablas</a>
-                    </li>
-            
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- third-level-items -->
+                                <a href="../class/morris.html">Listado de Clientes</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -465,54 +380,49 @@
                     <!-- Notifications-->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i>Panel de Notificaciones
-                        </div>
+                            <i class="fa fa-bell fa-fw"></i>Panel de Sociales
+                            </div>
 
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i>Nuevo Comentario
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="https://twitter.com/?lang=es" class="list-group-item">
-                                    <i class="fa fa-twitter fa-fw"></i> Twitter
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="https://www.facebook.com/" class="list-group-item">
-                                    <i class="fa fa-facebook fa-fw" ></i> Facebook
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="https://www.instagram.com/?hl=es" class="list-group-item">
-                                    <i class="fa fa-instagram fa-fw" ></i> Instagram
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                 <a href="https://www.youtube.com/" class="list-group-item">
-                                    <i class="fa fa-youtube fa-fw" ></i> YouTube
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                 <a href="https://espanol.yahoo.com/" class="list-group-item">
-                                    <i class="fa fa-yahoo fa-fw" ></i> Yahoo
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="https://web.whatsapp.com/" class="list-group-item">
-                                    <i class="fa fa-whatsapp fa-fw" ></i> Whatsapp
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
+                                <div class="panel-body">
+                                    <div class="list-group">
+                                            <!-- Social Buttons-->
+                                <div class="panel panel-default">                        
+                                    <div class="panel-body">
+                                        <h4>Redes Sociales</h4>
+                                        <a class="btn btn-block btn-social btn-dropbox" href="https://www.dropbox.com/" >
+                                            <i class="fa fa-dropbox"></i> Iniciar Sesion con Dropbox
+                                        </a>
+                                        <a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/">
+                                            <i class="fa fa-facebook"></i> Iniciar Sesion con Facebook
+                                        </a>
+                                          
+                                        <a class="btn btn-block btn-social btn-github" href="https://www.github.com/">
+                                            <i class="fa fa-github"></i> Iniciar Sesion con GitHub
+                                        </a>
+                                        <a class="btn btn-block btn-social btn-google-plus" href="https://www.google.com/">
+                                            <i class="fa fa-google-plus"></i> Iniciar Sesion con Google
+                                        </a>
+                                        <a class="btn btn-block btn-social btn-instagram" href="https://www.instagram.com/">
+                                            <i class="fa fa-instagram"></i> Iniciar Sesion con Instagram
+                                        </a>
+                                        <a class="btn btn-block btn-social btn-linkedin" href="https://www.linkedin.com/">
+                                            <i class="fa fa-linkedin"></i> Iniciar Sesion con LinkedIn
+                                        </a>
+                                        
+                                        <a class="btn btn-block btn-social btn-twitter" href="https://twitter.com/">
+                                            <i class="fa fa-twitter"></i> Iniciar Sesion con Twitter
+                                        </a>
+                                    </div>
+                                </div>
+                                  <!-- Social Buttons-->
+                            </div>
                             </div>
                         </div>
                     </div>
                     <!--End Notifications-->
                 </div>                
         <!-- end page-wrapper -->
-             </div>                
-
+             </div>    
     </div>
     <!-- end wrapper -->
 
