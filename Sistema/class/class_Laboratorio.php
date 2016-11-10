@@ -67,12 +67,13 @@
 		public function setEncargado($Encargado){
 			$this->Encargado = $Encargado;
 		}
-		public function nuevo(){}
+		/*public function nuevo(){}
 		public function eliminar(){}
 		public function salir(){}
 		public function buscar(){}
 		public function modificar(){}
-		public function conexion(){}
+		public function conexion(){}*/
+
 		public function toString(){
 			return "CodigoLaboratorio: " . $this->codigoLaboratorio . 
 				" NombreLaboratorio: " . $this->nombreLaboratorio . 
@@ -82,5 +83,19 @@
 				" PaginaWeb: " . $this->paginaWeb . 
 				" Encargado: " . $this->Encargado;
 		}
+		public static function generarListaLaboratorios($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_laboratorio, nombre_laboratorio 
+				FROM tbl_laboratorios")			
+			);
+			echo '<select name="" id="slc-laboratorios" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_laboratorio"].'">'.
+					$fila["nombre_laboratorio"].'</option>';
+			}
+			echo '</select>';
+
+		}
+
 	}
 ?>
