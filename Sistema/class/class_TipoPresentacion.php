@@ -36,5 +36,18 @@
 				" NombrePresentacion: " . $this->nombrePresentacion . 
 				" Fotografia: " . $this->fotografia;
 		}
+		public static function generarListaPresentaciones($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_presentacion, nombre_presentacion 
+				FROM tbl_presentaciones")			
+			);
+			echo '<select name="" id="slc-presentaciones" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_presentacion"].'">'.
+					$fila["nombre_presentacion"].'</option>';
+			}
+			echo '</select>';
+
+		}
 	}
 ?>
