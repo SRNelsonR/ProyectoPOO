@@ -1,8 +1,142 @@
 <?php
     //VERIFICACIONES
-    if (isset($_POST[""]))
-                echo "<h1>".$_POST["txt-nombre-producto"]."</h1>";
+ /*  sleep(5);
+    $valCodigoBarra = validarInformacion($_GET["txt-codigo-barra"]);
+        if(!$valCodigoBarra)
+            echo "Codigo de Barra del Producto no ingresado<br>";
+        else
+            echo "Codigo de Barra del Producto: " . $_GET["txt-codigo-barra"] . "<br>";
 
+    $valNombre = validarInformacion($_GET["txt-nombre-producto"]);
+        if(!$valNombre)
+            echo "Nombre del Producto no ingresado<br>";
+        else
+            echo "Nombre del Producto: " . $_GET["txt-nombre-producto"] . "<br>";
+
+    $valCantidad = validarInformacion($_GET["txt-cantidad-producto"]);
+        if(!$valCantidad)
+            echo "Cantidad del Producto no ingresada<br>";
+        else
+            echo "Cantidad del Producto: " . $_GET["txt-cantidad-producto"] . "<br>";
+
+    $valPrecioCompra = validarInformacion($_GET["txt-precio-compra-producto"]);
+        if(!$valPrecioCompra)
+            echo "Precio de Compra no ingresado<br>";
+        else
+            echo "Precio de Compra: " . $_GET["txt-precio-compra-producto"] . "<br>";
+
+    $valPrecioVenta = validarInformacion($_GET["txt-precio-venta-producto"]);
+        if(!$valPrecioVenta)
+            echo "Precio de Venta no ingresado<br>";
+        else
+            echo "Precio de Venta: " . $_GET["txt-precio-venta-producto"] . "<br>";
+
+    $valTipoPresentacion = validarInformacion($_GET["slc-tipo-presentacion-producto"]);
+        if(!$valTipoPresentacion)
+            echo "Tipo de Presentacion no ingresado<br>";
+        else
+            echo "Tipo de Presentacion: " . $_GET["slc-tipo-presentacion-producto"] . "<br>";
+
+    $valLaboratorio = validarInformacion($_GET["slc-laboratorios"]);
+        if(!$valLaboratorio)
+            echo "Laboratorio no ingresado<br>";
+        else
+            echo "Laboratorio: " . $_GET["slc-laboratorios"] . "<br>";
+
+    $valFechaIngreso = validarInformacion($_GET["txt-fecha-ingreso-producto"]);
+        if(!$valFechaIngreso)
+            echo "Fecha de Ingreso del Producto no ingresado<br>";
+        else
+            echo "Fecha de Ingreso del Producto: " . $_GET["txt-fecha-ingreso-producto"] . "<br>";
+
+    $valFechaVencimiento = validarInformacion($_GET["txt-fecha-vencimiento-producto"]);
+        if(!$valFechaVencimiento)
+            echo "Fecha de Vencimiento del Producto no ingresado<br>";
+        else
+            echo "Fecha de Vencimiento del Producto: " . $_GET["txt-fecha-vencimiento-producto"] . "<br>";
+
+    $valDosis = validarInformacion($_GET["rd-dosis-producto"]);
+        if(!$valDosis)
+            echo "Dosis no ingresado<br>";
+        else
+            echo "Dosis: " . $_GET["rd-dosis-producto"] . "<br>";
+
+    $valIndicaciones = validarInformacion($_GET["txt-indicaciones-producto"]);
+        if(!$valIndicaciones)
+            echo "Indicaciones del Producto no ingresado<br>";
+        else
+            echo "Indicaciones del Producto: " . $_GET["txt-indicaciones-producto"] . "<br>";
+
+    $valEstado = validarInformacion($_GET["slc-estado-producto"]);
+        if(!$valEstado)
+            echo "Estado del Producto no ingresado<br>";
+        else
+            echo "Estado del Producto: " . $_GET["slc-estado-producto"] . "<br>";
+
+    $valIngredientes = validarInformacion($_GET["chk-ingredientes"]);
+        if(!$valIngredientes)
+            echo "Ingredientes del Producto no ingresado<br>";
+        else
+            echo "Ingredientes del Producto: " . $_GET["chk-ingredientes"] . "<br>";
+
+    $valDolencias = validarInformacion($_GET["chk-dolencias"]);
+        if(!$valDolencias)
+            echo "Dolencias del Producto no ingresado<br>";
+        else
+            echo "Dolencias del Producto: " . $_GET["chk-dolencias"] . "<br>";
+
+    $valTipoVenta = validarInformacion($_GET["slc-tipo-venta"]);
+        if(!$valTipoVenta)
+            echo "Tipo de Venta del Producto no ingresado<br>";
+        else
+            echo "Tipo de Venta del Producto: " . $_GET["slc-tipo-venta"] . "<br>";
+
+    $valDescuento = validarInformacion($_GET["slc-descuentos"]);
+        if(!$valDescuento)
+            echo "Descuento del Producto no ingresado<br>";
+        else
+            echo "Descuento del Producto: " . $_GET["slc-descuentos"] . "<br>";
+
+    $valImpuesto = validarInformacion($_GET["slc-impuestos"]);
+        if(!$valImpuesto)
+            echo "Impuesto del Producto no ingresado<br>";
+        else
+            echo "Impuesto del Producto: " . $_GET["slc-impuestos"] . "<br>";
+
+    $valFotografia = validarInformacion($_GET["txt-fotografia"]);
+        if(!$valFotografia)
+            echo "Fotografia del Producto no ingresado<br>";
+        else
+            echo "Fotografia del Producto: " . $_GET["txt-fotografia"] . "<br>";
+
+    if( $valNombre==true && 
+        $valDescripcion==true && 
+        $valFechaPublicacion==true && 
+        $valClasificacion==true && 
+        $valUrl==true && 
+        $valTamanio==true && 
+        $valVersion==true && 
+        $valFechaActualizacion==true){
+        echo "Informacion Completa";
+    }else{
+        echo "Informacion Incompleta";
+    }
+
+    function validarInformacion($valor){
+        if(trim($valor) == "")
+            return false;
+        else
+            return true;
+    }
+*/
+    include_once("class_conexion.php");
+    include_once("class_descuento.php");
+    include_once("class_impuesto.php");
+    include_once("class_TipoPresentacion.php");
+    include_once("class_Producto.php");
+    include_once("class_Laboratorio.php");
+
+    $conexion = new Conexion();
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,71 +164,19 @@
             <!-- navbar-header -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Navegacion MaxUtil </span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../formularios/administrador.php">
-                    <img src="../img/logoMaxUtil.png" alt="" />
+                <a class="navbar-brand" href="../formularios/administrador.php" >
+                    <img src="../img/logoMaxUtil.png" alt="" width="150" style="height: 70px;" />
                 </a>
             </div>
             <!-- end navbar-header -->
             <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
                 <!-- main dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
-                    </a>
-                    <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-messages -->
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
@@ -174,78 +256,12 @@
                     </ul>
                     <!-- end dropdown-tasks -->
                 </li>
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
-                    </a>
-                    <!-- dropdown alerts-->
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i>New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i>New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-alerts -->
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-3x"></i>
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                        </li>
                         <li class="divider"></li>
                         <li><a href="../index.php"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
@@ -292,89 +308,86 @@
                         </div>
                         <!--end search section-->
                     </li>
-                    <li class="">
-                        <a href="../formularios/administrador.php"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="morris.html">Morris Charts</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                     <li>
-                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
-                    </li>
                     <li class="selected">
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
+                        <a href="../formularios/administrador.php"><i class="fa fa-dashboard fa-fw"></i>Tablero Principal</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Mantenimiento del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
+                                <a href="../class/forms.php">Productos</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Buttons</a>
+                                <a href="../class/forms1.php">Clientes</a>
                             </li>
                             <li>
-                                <a href="notifications.html">Notifications</a>
+                                <a href="../class/forms2.php">Empleados</a>
                             </li>
                             <li>
-                                <a href="typography.html">Typography</a>
+                                <a href="../class/forms3.php">Laboratorios</a>
                             </li>
                             <li>
-                                <a href="grid.html">Grid</a>
+                                <a href="../class/forms4.php">Presentaciones</a>
+                            </li>
+                            <li>
+                                <a href="../class/forms5.php">Dolencias</a>
+                            </li>
+                            <li>
+                                <a href="../class/forms6.php">Estados</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Configuracion del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- third-level-items -->
+                                <a href="../class/forms7.html">Configuracion del ISV</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Graficos del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="blank.html">Blank Page</a>
+                                <a href="../class/morris.html">Ir a Graficos</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Consultas<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../class/tables.html">Precio Productos</a>
                             </li>
                             <li>
-                                <a href="../index.php">Login Page</a>
+                                <a href="../class/tables1.html">Productos Inexistentes</a>
+                            </li>
+                            <li>
+                                <a href="../class/tables2.html">Productos por Dolencia</a>                                
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../class/flot.html">Listado de Productos</a>
+                            </li>
+                            <li>
+                                <a href="../class/morris.html">Listado de Clientes</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Archivo<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../index.php">Cerrar Sesion</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -385,6 +398,7 @@
             <!-- end sidebar-collapse -->
         </nav>
         <!-- end navbar side -->
+        
         <!--  page-wrapper -->
           <div id="page-wrapper">
             <div class="row">
@@ -408,7 +422,13 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Codigo Producto:</label>
-                                            <input class="form-control" placeholder="Escriba el Codigo del Producto">
+                                            <?php
+                                                Producto::obtenerCodigo($conexion);
+                                            ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Codigo de Barra del Producto:</label>
+                                            <input class="form-control" placeholder="Codigo del Producto" id="txt-codigo-barra">
                                         </div>
                                         <div class="form-group">
                                             <label>Nombre Producto:</label>
@@ -424,31 +444,35 @@
                                             <input type="text" class="form-control" placeholder="Escriba el Precio de Compra del Producto" id="txt-precio-compra-producto">
                                             <span class="input-group-addon">.00</span>
                                         </div>
+                                        <div class="form-group">
+                                            <label>Descuento:</label>
+                                            <?php
+                                            Descuento::generarListaDescuentos($conexion);
+                                            ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Impuesto:</label>
+                                            <?php
+                                            Impuesto::generarListaImpuestos($conexion);
+                                            ?>
+                                        </div>
                                         <label>Precio de Venta:</label><br>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">L.</span>
-                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Venta del Producto" id="txt-precio-venta-producto">
+                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Venta del Producto" id="txt-precio-venta-producto" disabled="disabled">
                                             <span class="input-group-addon">.00</span>
                                         </div>
                                         <div class="form-group">
                                             <label>Tipo Presentacion:</label>
-                                            <select class="form-control" id="txt-tipo-presentacion-producto">
-                                                <option>-Seleccione-</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                            <?php
+                                            TipoPresentacion::generarListaPresentaciones($conexion);
+                                            ?>
                                         </div>
                                         <div class="form-group">
-                                            <label>Laboratorios</label>
-                                            <select class="form-control" id="slc-laboratorio">
-                                                <option>-Seleccione-</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                            <label>Laboratorio: </label>
+                                            <?php
+                                            Laboratorio::generarListaLaboratorios($conexion);
+                                            ?>
                                         </div>
                                         <div class="form-group">
                                             <label>Fecha de Ingreso:</label>
@@ -460,11 +484,17 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Dosis Producto:</label>
-                                            <input class="form-control" placeholder="Escriba la Dosis del Producto" id="txt-dosis-producto">
+                                            <select class="form-control" id="rd-dosis-producto">
+                                                <option>-Seleccione-</option>
+                                                <option>Cada 6 horas</option>
+                                                <option>Cada 8 horas</option>
+                                                <option>Cada 12 horas</option>
+                                                <option>Cada 24 horas</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Indicaciones Producto:</label>
-                                            <input class="form-control" placeholder="Escriba las Indicaciones del Producto" id="txt-indicaciones-producto">
+                                            <textarea class="form-control" placeholder="Escriba las Indicaciones del Producto" id="txt-indicaciones-producto"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Estado</label>
@@ -523,31 +553,12 @@
                                                 <option>5</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Descuento:</label>
-                                            <select class="form-control" id="slc-descuentos">
-                                                <option>-Seleccione-</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Impuesto:</label>
-                                            <select class="form-control" id="slc-impuestos">
-                                                <option>-Seleccione-</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>Fotografia:</label>
                                             <input type="file" id="txt-fotografia">
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-primary" id="btn-guardar-producto">Guardar</button>
                                         <button type="reset" class="btn btn-success">Limpiar</button>
                                     </form>
                                 </div>
