@@ -285,10 +285,11 @@
             <h1><br>Productos</h1>
             
              <div class="row">
+             
                 <div id="div-mostrar-productos">
                     <!-- Aqui se cargaran los productos -->
-
                 </div>
+
                 <div  class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <div class="well">
                         <div class="bg-info">

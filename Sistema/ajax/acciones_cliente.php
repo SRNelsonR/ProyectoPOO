@@ -64,6 +64,24 @@
 
 		case '2':
 				echo "Hola";
+				?>
+
+					<div  class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+	                    <div class="well">
+	                        <div class="bg-info">
+	                            <img src="../img/medicamento1.jpg" class="img-responsive">
+	                            <b>NEUROBION DC 25000 HYPAK CON 1 JERINGA</b><br>
+	                            <span class="label label-primary">3</span>
+	                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+	                            <br>
+	                            <p>VITAMINA B1 (TIAMINA)   100 MG
+	                            VITAMINA B6 (PIRIDOXINA)    100 MG
+	                            VITAMINA B12 (CIANOCOBALAMINA, HIDROXOCOBALAMINA)   25000 MCG<p><br>
+	                        </div>
+	                    </div>
+	                </div>
+
+				<?php
 			break;
 		
 		default:

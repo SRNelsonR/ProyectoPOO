@@ -39,7 +39,7 @@ $(document).ready(function(){
 			url: "ajax/acciones_cliente.php?accion=2",
 			//method: "POST",
 			success: function(seccionProductos){
-				$("#div-mostrar-productos").html(seccionProductos);
+				$("#div-mostrar-productos1").html(seccionProductos);
 			},
 			error: function(){
 
