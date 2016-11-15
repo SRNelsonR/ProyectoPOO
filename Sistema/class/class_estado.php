@@ -48,5 +48,19 @@
 			$codigoA = ($fila["id"]+1);
 			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del estado" value="'.$codigoA.'" id="txt-codigo-estado">';
 			}
+
+		public static function guardarEstado($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("INSERT INTO tbl_estados
+					(codigo_estado, nombre_estado) 
+					VALUES (NULL,'%s')",
+					stripslashes($_GET["txt-codigo-estado"]))
+				);
+
+			if ($resultado) {
+				echo "Registro guardado";
+			}else
+				echo "Registro no guardado";
+		}
 	}
 ?>

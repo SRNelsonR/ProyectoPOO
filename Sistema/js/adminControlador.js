@@ -1,4 +1,22 @@
 $(document).ready(function(){
+	$("#btn-guardar-estado").click(function(){
+		var parametro = "txt-codigo-estado="+$("#txt-codigo-estado").val()+
+			"&txt-nombre-estado="+$("#txt-nombre-estado").val();
+
+		$.ajax({
+			url:"ajax/acciones.php?accion=2",
+			method: "POST",
+			data:parametro,
+			success: function(resultado){
+				$("#div-estados").html(resultado);
+			}
+			error:function(){
+
+			}
+		});
+
+	});
+
 	$("#btn-guardar-impuesto").click(function(){
 		var porcentajes="txt-codigo-impuesto="+$("#txt-codigo-impuesto").val()+
 			"&txt-nombre-impuesto="+$("#txt-nombre-impuesto").val()+
@@ -57,4 +75,4 @@ $(document).ready(function(){
 		});
 
 	});*/
-})
+});
