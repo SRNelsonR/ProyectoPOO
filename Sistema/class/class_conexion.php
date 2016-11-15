@@ -5,7 +5,7 @@
 		private $usuario="root";
 		private $contrasena="";
 		private $host="localhost";
-		private $baseDatos="bd_farmacia_maxutil";
+		private $baseDatos="db_farmacia_maxutil";
 		private $puerto="3306";
 		private $link;
 

@@ -34,6 +34,10 @@ $(document).ready(function(){
 		});
 	});
 
+	$("#btn-perfil").click(function(){
+		alert("Click en perfil");
+	});
+
 	cargarProductos = function(){
 		$.ajax({
 			url: "ajax/acciones_cliente.php?accion=2",
