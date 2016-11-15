@@ -1,11 +1,8 @@
 <?php
-
 	class Administrador extends Persona{
-
 		private $sueldo;
 		private $referencias;
 		private $especializacion;
-
 		public function __construct($nombre,
 					$apellido,
 					$edad,
