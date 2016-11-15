@@ -318,11 +318,12 @@
 <script src="../css/plugins/metisMenu/jquery.metisMenu.js"></script>
 <!--aGREGADOS-->
 <script src="../css/plugins/pace/pace.js"></script>
-<script src="../js/scripts/siminta.js"></script>
+<!--<script src="../js/scripts/siminta.js"></script>-->
 <!-- Page-Level Plugin Scripts-->
 <script src="../css/plugins/morris/raphael-2.1.0.min.js"></script>
-<script src="../css/plugins/morris/morris.js"></script>
+<!--!<script src="../css/plugins/morris/morris.js"></script>-->
 <script src="../js/scripts/dashboard-demo.js"></script>
+<script src="../js/controlador_cajero.js"></script>
 
 </body>
 </html>

@@ -43,16 +43,17 @@ $(document).ready(function(){
 			success:function(resultado){
 				$("#txt-nombre").val(resultado.nombre_cliente);
 				$("#txt-apellido").val(resultado.apellido_cliente);
-
-				$("#txt-codigo-aplicacion").val(resultado.codigo_aplicacion);				
-				$("#txt-descripcion").val(resultado.descripcion);
-				$("#txt-fecha-publicacion").val(resultado.fecha_publicacion);
-				$("#txt-calificacion").val(resultado.calificacion);
-				$("#txt-url").val(resultado.url);
-				$("#slc-icono").val(resultado.url_icono);
-				$("#txt-version").val(resultado.version);
-				$("#txt-fecha-actualizacion").val(resultado.fecha_actualizacion);
-				$("#slc-desarrollador").val(resultado.codigo_desarrollador)
+				$("#txt-edad").val(resultado.edad_cliente);				
+				$("#rbt-genero").val(resultado.nombre_genero);
+				$("#txt-identidad").val(resultado.identidad_cliente);
+				$("#txt-domicilio").val(resultado.direccion);
+				$("#txt-telefono").val(resultado.telefono);
+				$("#txt-correo").val(resultado.correo_electronico);
+				$("#slc-estado-civil").val(resultado.nombre_estado_civil);
+				$("#txt-fecha-nacimiento").val(resultado.fecha_nacimiento);
+				$("#txt-fecha-registro").val(resultado.fecha_ingreso_cliente);
+				$("#txt-membresia").val(resultado.codigo_membresia);
+				$("#slc-tipo-cliente").val(resultado.tipo_cliente);
 				//$("#json").html(resultado);
 			},
 			error:function(){

@@ -453,12 +453,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Contraseña:</td>
-                        <td>
-                            <input type="password" id="txt-contrasena" name="txt-contrasena" class="form-control">
-                        </td>
-                    </tr>
-                    <tr>
                         <td>Fecha de nacimiento:</td>
                         <td>
                             <input type="text" id="txt-fecha-nacimiento" name="txt-fecha-nacimiento" class="form-control">
@@ -468,12 +462,6 @@
                         <td>Fecha de registro:</td>
                         <td>
                             <input type="text" id="txt-fecha-registro" name="txt-fecha-registro" class="form-control">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nombre de usuario:</td>
-                        <td>
-                            <input type="text" id="txt-nombre-usuario" name="txt-nombre-usuario" class="form-control">
                         </td>
                     </tr>
                     <tr>
