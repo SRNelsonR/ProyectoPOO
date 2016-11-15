@@ -419,18 +419,13 @@
                     <tr>
                         <td>Género</td>
                         <td>
-                            <label>
-                                <input type="radio" id="rbt-genero" name="rbt-genero" value="1">Hombre
-                            </label>
-                            <label>
-                                <input type="radio" id="rbt-genero" name="rbt-genero" value="2">Mujer
-                            </label>
+                            <input type="text" id="rbt-genero" name="rbt-genero" class="form-control">
                         </td>
                     </tr>
                     <tr>
                         <td>Identidad:</td>
                         <td>
-                            <input type="text" id="txt-identidad" name="txt-identidad" placeholder="Ingrese su número de identidad" class="form-control">
+                            <input type="text" id="txt-identidad" name="txt-identidad" class="form-control">
                         </td>
                     </tr>
                     <tr>
@@ -454,11 +449,7 @@
                     <tr>
                         <td>Estado civil:</td>
                         <td>
-                            <select id="slc-estado-civil" name="slc-estado-civil" class="form-control">
-                            <option value="1">Solter@</option>;
-                            <option value="2">Casad@</option>;
-                            <option value="3">Unión libre</option>;
-                            </select>
+                            <input type="text" id="slc-estado-civil" name="slc-estado-civil" class="form-control">
                         </td>
                     </tr>
                     <tr>
@@ -494,11 +485,7 @@
                     <tr>
                         <td>Tipo cliente:</td>
                         <td>
-                            <select id="slc-tipo-cliente" name="slc-tipo-cliente" class="form-control">
-                            <option value="1">Plus</option>;
-                            <option value="2">Premium</option>;
-                            <option value="3">Normal</option>;
-                            </select>
+                            <input type="text" id="slc-tipo-cliente" name="slc-tipo-cliente" class="form-control">
                         </td>
                     </tr>
                     <tr>
@@ -511,6 +498,10 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div id="json">
+        
     </div>
 
     <br><br><br>

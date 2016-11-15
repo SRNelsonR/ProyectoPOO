@@ -83,6 +83,30 @@
 
 				<?php
 			break;
+		case '3':
+			//echo "Perfil cliente";
+			include_once("../class/class_conexion.php");
+			$conexion = new Conexion();
+			$resultado = $conexion->ejecutarInstruccion(
+					sprintf(
+						"SELECT a.codigo_tipo_cliente, b.nombre_genero,
+								c.nombre_estado_civil, a.nombre_cliente, 
+								a.apellido_cliente, a.identidad_cliente, 
+								a.fecha_nacimiento, a.edad_cliente, a.direccion, 
+								a.telefono, a.correo_electronico, 
+								a.fecha_ingreso_cliente, a.codigo_membresia
+						FROM tbl_clientes a
+						INNER JOIN tbl_generos b 
+						ON(a.codigo_genero = b.codigo_genero)
+						INNER JOIN tbl_estado_civil c 
+						ON(a.codigo_estado_civil = c.codigo_estado_civil)
+						WHERE codigo_cliente = 2")
+					);
+
+			$fila = $conexion->obtenerFila($resultado);
+			echo json_encode($fila);
+			$conexion->cerrarConexion();
+			break;
 		
 		default:
 			# code...

@@ -35,8 +35,31 @@ $(document).ready(function(){
 	});
 
 	$("#btn-perfil").click(function(){
-		alert("Click en perfil");
-		$("#txt-nombre").val("Nombre del cliente");
+		$.ajax({
+			url:"../ajax/acciones_cliente.php?accion=3",
+			method: "POST",
+			//data: "codigo_aplicacion="+codigoAplicacion,
+			dataType: 'json',
+			success:function(resultado){
+				$("#txt-nombre").val(resultado.nombre_cliente);
+				$("#txt-apellido").val(resultado.apellido_cliente);
+
+				$("#txt-codigo-aplicacion").val(resultado.codigo_aplicacion);				
+				$("#txt-descripcion").val(resultado.descripcion);
+				$("#txt-fecha-publicacion").val(resultado.fecha_publicacion);
+				$("#txt-calificacion").val(resultado.calificacion);
+				$("#txt-url").val(resultado.url);
+				$("#slc-icono").val(resultado.url_icono);
+				$("#txt-version").val(resultado.version);
+				$("#txt-fecha-actualizacion").val(resultado.fecha_actualizacion);
+				$("#slc-desarrollador").val(resultado.codigo_desarrollador)
+				//$("#json").html(resultado);
+			},
+			error:function(){
+
+			}
+		});
+		//$("#txt-nombre").val("Nombre del cliente");
 		$("#div-perfil").fadeIn(100);
 	});
 
