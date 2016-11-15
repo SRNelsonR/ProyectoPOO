@@ -51,16 +51,20 @@
 						);
 					$cliente->nuevo($conexion,$_POST["txt-fecha-nacimiento"]);
 					
-					header("Location: index.php");
+					//header("Location: index.php");
 					$conexion->cerrarConexion();
-					echo "Usuario Creado";	
-					header("Location: ../index.php");
+					echo "Usuario Creado";
+					//header("Location: ../index.php");
 					break;
 			}
 			else{
-				echo "Por favor llenar todos los campos";
+				echo "Por favor llenar todos los campos antes de crear cuenta";
 				break;
 			}
+
+		case '2':
+				echo "Hola";
+			break;
 		
 		default:
 			# code...

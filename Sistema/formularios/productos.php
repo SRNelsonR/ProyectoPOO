@@ -285,6 +285,10 @@
             <h1><br>Productos</h1>
             
              <div class="row">
+                <div id="div-mostrar-productos">
+                    <!-- Aqui se cargaran los productos -->
+
+                </div>
                 <div  class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <div class="well">
                         <div class="bg-info">
@@ -370,10 +374,12 @@
         <script src="../css/plugins/metisMenu/jquery.metisMenu.js"></script>
         <!--aGREGADOS-->
         <script src="../css/plugins/pace/pace.js"></script>
-        <script src="../js/scripts/siminta.js"></script>
+        <!---<script src="../js/scripts/siminta.js"></script>-->
         <!-- Page-Level Plugin Scripts-->
         <script src="../css/plugins/morris/raphael-2.1.0.min.js"></script>
         <script src="../css/plugins/morris/morris.js"></script>
         <script src="../js/scripts/dashboard-demo.js"></script>
+        <script src="../js/controlador_cliente.js"></script>
+        <!--<script src="../js/controlador_productos.js"></script>-->
     </body>
 </html>
