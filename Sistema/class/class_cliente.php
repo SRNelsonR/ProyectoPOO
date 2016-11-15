@@ -20,10 +20,12 @@
 					$estadoCivil,
 					$usuario,
 					$contrasena,
+					$fotografia,
 					$codigoCliente,
 					$membresia,
-					$tipoCliente){
-			parent($nombre,
+					$tipoCliente,
+					$fechaIngreso){
+			parent::__construct($nombre,
 					$apellido,
 					$edad,
 					$genero,
@@ -33,7 +35,8 @@
 					$correo,
 					$estadoCivil,
 					$usuario,
-					$contrasena
+					$contrasena,
+					$fotografia
 					);
 			$this->codigoCliente = $codigoCliente;
 			$this->membresia = $membresia;
@@ -64,16 +67,61 @@
 		public function setFechaIngreso($fechaIngreso){
 			$this->fechaIngreso = $fechaIngreso;
 		}
-		public function nuevo(){}
+	
 		public function eliminar(){}
 		public function salir(){}
 		public function buscar(){}
 		public function modificar(){}
 		public function conexion(){}
+		
 		public function toString(){
 			return parent::toString()." CodigoCliente: " . $this->codigoCliente . 
 				" Membresia: " . $this->membresia->toString() . 
 				" TipoCliente: " . $this->tipoCliente;
+		}
+
+		public function nuevo($conexion,$fechaNacimiento){
+			$sql = sprintf(
+				"INSERT INTO tbl_clientes 
+						(
+							codigo_cliente, codigo_tipo_cliente, 
+							codigo_genero, codigo_estado_civil, 
+							nombre_cliente, apellido_cliente, 
+							identidad_cliente, fecha_nacimiento, 
+							edad_cliente, direccion, telefono, 
+							correo_electronico, fotografia, 
+							fecha_ingreso_cliente, codigo_membresia
+						) VALUES (
+						NULL, '%s',#tipocliente 
+						'%s', '%s',#codgenero, codestadocivil 
+						'%s', '%s',#nombre,apellido 
+						'%s', '%s', #identidad, fenacimiento
+						'%s', '%s', '%s',#edad,dir,tel 
+						'%s', NULL,#correo_electronico 
+						'%s', '%s'#feingreso,codmembresia
+						)",
+						stripslashes($this->tipoCliente),
+						stripslashes($this->genero),
+						stripslashes($this->estadoCivil),
+						stripslashes($this->nombre),
+						stripslashes($this->apellido),
+						stripslashes($this->identificacion),
+						stripslashes($fechaNacimiento),
+						stripslashes($this->edad),
+						stripslashes($this->domicilio),
+						stripslashes($this->telefono),
+						stripslashes($this->correo),
+						stripslashes($this->fechaIngreso),
+						stripslashes($this->membresia)
+				);
+
+			$resultado = $conexion->ejecutarInstruccion($sql);
+			if($resultado){
+				echo "<b>Registro almacenado con exito</b>";
+			}else{
+				echo "Error al guardar el registro";
+				exit;
+			}
 		}
 
 		public static function  obtenerCodigo($conexion){

@@ -59,6 +59,7 @@
     <script src="css/plugins/jquery-1.10.2.js"></script>
     <script src="css/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="css/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!--<script src="js/controlador_cliente.js"></script>-->
 
 </body>
 

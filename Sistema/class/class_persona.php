@@ -114,7 +114,7 @@
 		public function setFotografia($fotografia){
 			$this->fotografia = $fotografia;
 		}
-		public function nuevo(){}
+		//public function nuevo(){}
 		public function eliminar(){}
 		public function salir(){}
 		public function buscar(){}
