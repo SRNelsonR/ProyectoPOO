@@ -36,6 +36,8 @@ $(document).ready(function(){
 
 	$("#btn-perfil").click(function(){
 		alert("Click en perfil");
+		$("#txt-nombre").val("Nombre del cliente");
+		$("#div-perfil").fadeIn(100);
 	});
 
 	cargarProductos = function(){

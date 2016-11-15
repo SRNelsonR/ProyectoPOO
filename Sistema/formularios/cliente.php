@@ -107,7 +107,7 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="perfil_cliente.php" id="btn-perfil"><i class="fa fa-user fa-fw"></i>Perfil</a>
+                        <li><a href="#" id="btn-perfil"><i class="fa fa-user fa-fw"></i>Perfil</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i>Configuracion</a>
                         </li>
@@ -390,22 +390,130 @@
             
         </div>
 
-        <div class="well">
-            <h1><br>Productos</h1>
-            <div  class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                <div class="bg-info">
-                    <img src="../img/m1.jpg" class="img-responsive">
-                    <b>NEUROBION DC 25000 HYPAK CON 1 JERINGA</b><br>
-                    <span class="label label-primary">3</span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <br>
-                    VITAMINA B1 (TIAMINA)   100 MG
-                    VITAMINA B6 (PIRIDOXINA)    100 MG
-                    VITAMINA B12 (CIANOCOBALAMINA, HIDROXOCOBALAMINA)   25000 MCG<br>
-                </div>
+    </div><br><br>
+
+    <div class="container-fluid" id="div-perfil" style="display:none;">
+    <div class="bg bg-info">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 well">
+                <h1>Perfil</h1><br><br>
+                <table class = "table table-striped table-hover">
+                    <tr>
+                        <td>Nombre:</td>
+                        <td>
+                            <input type="text" id="txt-nombre" name="txt-nombre" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apellido:</td>
+                        <td>
+                            <input type="text" id="txt-apellido" name="txt-apellido" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Edad:</td>
+                        <td>
+                            <input type="text" id="txt-edad" name="txt-edad" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Género</td>
+                        <td>
+                            <label>
+                                <input type="radio" id="rbt-genero" name="rbt-genero" value="1">Hombre
+                            </label>
+                            <label>
+                                <input type="radio" id="rbt-genero" name="rbt-genero" value="2">Mujer
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Identidad:</td>
+                        <td>
+                            <input type="text" id="txt-identidad" name="txt-identidad" placeholder="Ingrese su número de identidad" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Domicilio:</td>
+                        <td>
+                            <input type="text" id="txt-domicilio" name="txt-domicilio" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telefono:</td>
+                        <td>
+                            <input type="text" id="txt-telefono" name="txt-telefono" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Correo electrónico</td>
+                        <td>
+                            <input type="text" id="txt-correo" name="txt-correo" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Estado civil:</td>
+                        <td>
+                            <select id="slc-estado-civil" name="slc-estado-civil" class="form-control">
+                            <option value="1">Solter@</option>;
+                            <option value="2">Casad@</option>;
+                            <option value="3">Unión libre</option>;
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Contraseña:</td>
+                        <td>
+                            <input type="password" id="txt-contrasena" name="txt-contrasena" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de nacimiento:</td>
+                        <td>
+                            <input type="text" id="txt-fecha-nacimiento" name="txt-fecha-nacimiento" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de registro:</td>
+                        <td>
+                            <input type="text" id="txt-fecha-registro" name="txt-fecha-registro" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de usuario:</td>
+                        <td>
+                            <input type="text" id="txt-nombre-usuario" name="txt-nombre-usuario" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Membresia:</td>
+                        <td>
+                            <input type="text" id="txt-membresia" name="txt-membresia" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tipo cliente:</td>
+                        <td>
+                            <select id="slc-tipo-cliente" name="slc-tipo-cliente" class="form-control">
+                            <option value="1">Plus</option>;
+                            <option value="2">Premium</option>;
+                            <option value="3">Normal</option>;
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="cliente.php" class="btn btn-success">Regresar</a>
+                        </td>
+                    </tr>
+                </table>
+            <br><br>
             </div>
         </div>
-    </div><br><br><br><br><br>
+    </div>
+    </div>
+
+    <br><br><br>
 
 		<script src="../css/plugins/jquery-1.10.2.js"></script>
 	    <script src="../css/plugins/bootstrap/bootstrap.min.js"></script>
