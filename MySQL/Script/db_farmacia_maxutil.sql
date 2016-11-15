@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2016 a las 23:51:55
+-- Tiempo de generación: 16-11-2016 a las 00:48:14
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -74,14 +74,15 @@ CREATE TABLE IF NOT EXISTS `tbl_clientes` (
   KEY `fk_tbl_clientes_tbl_generos1_idx` (`codigo_genero`),
   KEY `fk_tbl_clientes_tbl_tipo_clientes1_idx` (`codigo_tipo_cliente`),
   KEY `fk_tbl_clientes_tbl_estado_civil1_idx` (`codigo_estado_civil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `tbl_clientes`
 --
 
 INSERT INTO `tbl_clientes` (`codigo_cliente`, `codigo_tipo_cliente`, `codigo_genero`, `codigo_estado_civil`, `nombre_cliente`, `apellido_cliente`, `identidad_cliente`, `fecha_nacimiento`, `edad_cliente`, `direccion`, `telefono`, `correo_electronico`, `fotografia`, `fecha_ingreso_cliente`, `codigo_membresia`) VALUES
-(1, 3, 1, 2, 'Juana', 'Rodriguez', '0801196500846', '2013-04-17', 53, 'Col san angel', '27459787', 'juana@yahoo.es', NULL, '2016-11-01', 'jfs3563');
+(1, 3, 1, 2, 'Juana', 'Rodriguez', '0801196500846', '2013-04-17', 53, 'Col san angel', '27459787', 'juana@yahoo.es', NULL, '2016-11-01', 'jfs3563'),
+(2, 3, 1, 1, 'Juan', 'Perez', '0801199512796', '1995-07-11', 21, 'El hato', '99786466', 'juan@gmail.om', NULL, '2016-11-15', 'a');
 
 -- --------------------------------------------------------
 
@@ -192,15 +193,14 @@ CREATE TABLE IF NOT EXISTS `tbl_empleados` (
   KEY `fk_tbl_empleados_tbl_empleados1_idx` (`codigo_jefe_superior`),
   KEY `fk_tbl_empleados_tbl_sucursales1_idx` (`codigo_sucursal`),
   KEY `fk_tbl_empleados_tbl_estado_civil1_idx` (`codigo_estado_civil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `tbl_empleados`
 --
 
 INSERT INTO `tbl_empleados` (`codigo_empleado`, `codigo_genero`, `codigo_profesion`, `codigo_tipo_contrato`, `codigo_jornada`, `codigo_imagen`, `codigo_tipo_usuario`, `recomendacion`, `codigo_sucursal`, `codigo_jefe_superior`, `nombre_empleado`, `apellido_empleado`, `identidad_empleado`, `fecha_nacimiento_empleado`, `direccion_empleado`, `telefono_empleado`, `correo_electronico`, `usuario_empleado`, `contraseña`, `edad_empleado`, `fecha_inicio_empleado`, `referencia_empleado`, `codigo_estado_civil`) VALUES
-(1, 1, 3, 3, 3, 2, 3, 'francisco', 2, NULL, 'Pedro', 'Perez', '8058632241', '2016-09-12', 'francisco de oriente', '546456767', 'pperes@gmail.com', 'perezp@yahoo.es', 'asd.456', 45, '2016-11-01', 'perez perez', 2),
-(2, 2, 2, 2, 1, 1, 2, 'lainez', 2, 1, 'Reina', 'Rosales', '63596523', '2016-08-15', 'zarzal', '24335767', 'rrosales@gmail.com', 'rosalesreina@yahoo.es', 'asd.456', 23, '2016-11-08', NULL, 2);
+(3, 2, 3, 2, 2, 3, 2, NULL, 1, NULL, 'pedro', 'gomez', '0803454566', '2016-11-01', 'Retiro', '23456576', NULL, 'pedro@gmail.com', 'asd.456', 45, '2016-11-16', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -395,7 +395,6 @@ CREATE TABLE IF NOT EXISTS `tbl_laboratorios` (
   `correo_laboratorio` varchar(300) DEFAULT NULL,
   `telefono_laboratorio` varchar(50) NOT NULL,
   `pagina_web_laboratorio` varchar(500) DEFAULT NULL,
-  `fotografia_laboratorio` tinyblob,
   PRIMARY KEY (`codigo_laboratorio`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -403,11 +402,11 @@ CREATE TABLE IF NOT EXISTS `tbl_laboratorios` (
 -- Volcado de datos para la tabla `tbl_laboratorios`
 --
 
-INSERT INTO `tbl_laboratorios` (`codigo_laboratorio`, `nombre_laboratorio`, `direccion_laboratorio`, `encargado_laboratorio`, `correo_laboratorio`, `telefono_laboratorio`, `pagina_web_laboratorio`, `fotografia_laboratorio`) VALUES
-(1, '-- Seleccione --', 'Ninguno', 'Ninguno', 'Ninguno', 'Ninguno', 'Ninguno', NULL),
-(2, 'Laboratorios Clinicos Express', 'Plaza Santa Mónica de Col. Kennedy', 'Selvin Montoya', 'mercadeo@laboratoriosexpress.com', '2228-6598', 'http://laboratoriosexpress.com/labex/index.php/', NULL),
-(3, 'Laboratorio Centro Medico', 'Barrio La Granja, Comayaguela, M.D.C.', 'Julio Santana', ' laboratoriomolecularcentromedico@cablecolor.hn', ' 225-0567', 'http://laboratorioscentromedico.blogspot.com/', NULL),
-(4, 'Laboratorios MICROLAB', 'Bo. Guacerique, en la ciudad de Tegucigalpa. ', 'Juan Carlos Salazar', NULL, '22254013', 'http://www.nexdu.com/hn/Laboratorios-Microlab-Tegucigalpa', NULL);
+INSERT INTO `tbl_laboratorios` (`codigo_laboratorio`, `nombre_laboratorio`, `direccion_laboratorio`, `encargado_laboratorio`, `correo_laboratorio`, `telefono_laboratorio`, `pagina_web_laboratorio`) VALUES
+(1, '-- Seleccione --', 'Ninguno', 'Ninguno', 'Ninguno', 'Ninguno', 'Ninguno'),
+(2, 'Laboratorios Clinicos Express', 'Plaza Santa Mónica de Col. Kennedy', 'Selvin Montoya', 'mercadeo@laboratoriosexpress.com', '2228-6598', 'http://laboratoriosexpress.com/labex/index.php/'),
+(3, 'Laboratorio Centro Medico', 'Barrio La Granja, Comayaguela, M.D.C.', 'Julio Santana', ' laboratoriomolecularcentromedico@cablecolor.hn', ' 225-0567', 'http://laboratorioscentromedico.blogspot.com/'),
+(4, 'Laboratorios MICROLAB', 'Bo. Guacerique, en la ciudad de Tegucigalpa. ', 'Juan Carlos Salazar', NULL, '22254013', 'http://www.nexdu.com/hn/Laboratorios-Microlab-Tegucigalpa');
 
 -- --------------------------------------------------------
 
@@ -517,15 +516,14 @@ CREATE TABLE IF NOT EXISTS `tbl_sucursales` (
   `correo_electronico` varchar(200) DEFAULT NULL,
   `pagina_web` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`codigo_sucursal`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_sucursales`
 --
 
 INSERT INTO `tbl_sucursales` (`codigo_sucursal`, `nombre_sucursal`, `direccion`, `telefono`, `correo_electronico`, `pagina_web`) VALUES
-(1, 'Farmacia MaxUtil 1', 'Valle de Angeles', '98853243', NULL, NULL),
-(2, 'Farmacia MaxUtil 2', 'Tegucigalpa', '89323562', NULL, NULL);
+(1, 'Farmacia MaxUtil 1', 'Valle de Angeles', '98853243', NULL, NULL);
 
 -- --------------------------------------------------------
 
