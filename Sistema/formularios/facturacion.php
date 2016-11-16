@@ -159,21 +159,7 @@
                                 <label for="empresa" class="col-md-1 control-label">Cajero</label>
                                 <div class="col-md-3">
                                     <select class="form-control input-sm" id="id_vendedor">
-                                        <?php
-                                            $sql_vendedor=mysqli_query($con,"select * from users order by lastname");
-                                            while ($rw=mysqli_fetch_array($sql_vendedor)){
-                                                $id_vendedor=$rw["user_id"];
-                                                $nombre_vendedor=$rw["firstname"]." ".$rw["lastname"];
-                                                if ($id_vendedor==$_SESSION['user_id']){
-                                                    $selected="selected";
-                                                } else {
-                                                    $selected="";
-                                                }
-                                                ?>
-                                                <option value="<?php echo $id_vendedor?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
-                                                <?php
-                                            }
-                                        ?>
+                                        <!--consulta-->
                                     </select>
                                 </div>
                                 <label for="tel2" class="col-md-1 control-label">Fecha</label>
@@ -193,10 +179,7 @@
                     
                     <div class="col-md-12">
                         <div class="pull-right">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoProducto">
-                             <span class="glyphicon glyphicon-plus"></span> Nuevo producto
-                            </button>
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoCliente">
+                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoCliente">
                              <span class="glyphicon glyphicon-user"></span> Nuevo cliente
                             </button>
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
@@ -206,10 +189,12 @@
                               <span class="glyphicon glyphicon-print"></span> Imprimir
                             </button>
                         <button type="submit" class="btn btn-default">
-                              <span class="glyphicon glyphicon-print"></span> Salir
+                        <span class="glyphicon glyphicon-edit"></span> Editar
+                              
                             </button>
                             <button type="submit" class="btn btn-default">
-                              <span class="glyphicon glyphicon-print"></span> limpiar
+                            <span class="glyphicon glyphicon-remove"></span> Salir
+                              
                             </button>
 
 
