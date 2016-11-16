@@ -138,6 +138,23 @@
                             <div class="panel-heading">
                                 Farmacia Max Util ""
                             </div>
+                            
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                        <div class="panel-body">Estamos Ubicados en colonia Loarque ,Centro Comercial Lewis, Local No. 14 <br>
+                                        
+                                        Telefonos: 2258-6988, 2258-9685
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+
+                                    </div>
+<!-- / fin de sección de datos del Cliente  -->
 
                             <form class="form-horizontal" role="form" id="datos_factura">
                     <div class="form-group row">
@@ -193,8 +210,7 @@
                               
                             </button>
                             <button type="submit" class="btn btn-default">
-                            <span class="glyphicon glyphicon-remove"></span> Salir
-                              
+                            <span class="glyphicon glyphicon-remove"></span> Salir  
                             </button>
 
 
@@ -210,11 +226,7 @@
 
 
 
-                    <button type="submit" class="btn btn-default">Total</button>
-                    <button type="submit" class="btn btn-default">Borrar</button>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                    <button type="submit" class="btn btn-default">Cancelar</button>
-                    <button type="submit" class="btn btn-default">Salir</button>
+                    
                 </div>
             </div>
         </form>
