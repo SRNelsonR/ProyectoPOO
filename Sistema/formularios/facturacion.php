@@ -147,14 +147,16 @@
                                         
                                         Telefonos: 2258-6988, 2258-9685
                                                 
-                                                </div>
+                                                
                                             </div>
                                         </div>
-                                        
+
+                                        </div>                                        
+
 
 
                                     </div>
-<!-- / fin de sección de datos del Cliente  -->
+<!-- / fin de sección de datos de farmacia  -->
 
                             <form class="form-horizontal" role="form" id="datos_factura">
                     <div class="form-group row">
@@ -188,7 +190,7 @@
                                     <select class='form-control input-sm' id="condiciones">
                                         <option value="1">Efectivo</option>
                                         <option value="2">Cheque</option>
-                                        <option value="4">Crédito</option>
+                                        
                                     </select>
                                 </div>
                             </div>
