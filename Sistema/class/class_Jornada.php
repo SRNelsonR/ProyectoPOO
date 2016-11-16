@@ -26,5 +26,18 @@
 			return "CodigoJornada: " . $this->codigoJornada . 
 				" NombreJornada: " . $this->nombreJornada;
 		}
+		public static function generarListaJornadas($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_jornada, nombre_jornada 
+				FROM tbl_jornadas")			
+			);
+			echo '<select name="" id="slc-jornada" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_jornada"].'">'.
+					$fila["nombre_jornada"].'</option>';
+			}
+			echo '</select>';
+
+		}
 	}
 ?>

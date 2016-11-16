@@ -83,6 +83,16 @@
 				" PaginaWeb: " . $this->paginaWeb . 
 				" Encargado: " . $this->Encargado;
 		}
+		public static function  obtenerCodigo($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT MAX(codigo_laboratorio) AS id FROM tbl_laboratorios")			
+			);
+			
+			$fila = $conexion->obtenerFila($resultado);
+			$codigoA = ($fila["id"]+1);
+			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del laboratorio" value="'.$codigoA.'" id="txt-codigo-laboratorio">';
+			}
+
 		public static function generarListaLaboratorios($conexion){
 			$resultado = $conexion->ejecutarInstruccion(
 				sprintf("SELECT codigo_laboratorio, nombre_laboratorio 

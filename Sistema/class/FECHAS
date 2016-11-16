@@ -1,0 +1,13 @@
+sprintf(" inser... ,STR_TO_DATE('%s', '%s')",
+.
+.
+.
+.
+.
+stripslashes($_POST["fecha"]),
+"%d/%m/%Y",
+.
+.
+.
+
+Realizar Composicion!!!!!!!!!!!!

@@ -1,10 +1,13 @@
 <?php
+    include_once("class_Persona.php");
+	
 
 	class Cliente extends Persona{
 
 		private $codigoCliente;
 		private $membresia;
 		private $tipoCliente;
+		private $fechaIngreso;
 
 		public function __construct($nombre,
 					$apellido,
@@ -30,10 +33,12 @@
 					$correo,
 					$estadoCivil,
 					$usuario,
-					$contrasena);
+					$contrasena
+					);
 			$this->codigoCliente = $codigoCliente;
 			$this->membresia = $membresia;
 			$this->tipoCliente = $tipoCliente;
+			$this->fechaIngreso = $fechaIngreso;
 		}
 		public function getCodigoCliente(){
 			return $this->codigoCliente;
@@ -53,6 +58,12 @@
 		public function setTipoCliente($tipoCliente){
 			$this->tipoCliente = $tipoCliente;
 		}
+		public function getFechaIngreso(){
+			return $this->fechaIngreso;
+		}
+		public function setFechaIngreso($fechaIngreso){
+			$this->fechaIngreso = $fechaIngreso;
+		}
 		public function nuevo(){}
 		public function eliminar(){}
 		public function salir(){}
@@ -64,5 +75,15 @@
 				" Membresia: " . $this->membresia->toString() . 
 				" TipoCliente: " . $this->tipoCliente;
 		}
+
+		public static function  obtenerCodigo($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT MAX(codigo_cliente) AS id FROM tbl_clientes")			
+			);
+			
+			$fila = $conexion->obtenerFila($resultado);
+			$codigoA = ($fila["id"]+1);
+			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Cliente" value="'.$codigoA.'" id="txt-codigo-cliente">';
+			}
 	}
 ?>

@@ -52,5 +52,18 @@
 				" Sueldo: " . $this->sueldo . 
 				" DuracionContrato: " . $this->duracionContrato;
 		}
+		public static function generarListaTipoContratos($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_tipo_contrato, nombre_tipo_contrato 
+				FROM tbl_tipo_contratos")			
+			);
+			echo '<select name="" id="slc-tipo-contrato" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_tipo_contrato"].'">'.
+					$fila["nombre_tipo_contrato"].'</option>';
+			}
+			echo '</select>';
+
+		}
 	}
 ?>

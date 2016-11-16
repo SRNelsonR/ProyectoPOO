@@ -92,13 +92,13 @@
 			$this->precioCompra = $precioCompra;
 		}
 		public function getDescuento(){
-			return $this->descuento;
+			return $descuento;
 		}
 		public function setDescuento($descuento){
 			$this->descuento = $descuento;
 		}
 		public function getImpuesto(){
-			return $this->impuesto;
+			return $impuesto;
 		}
 		public function setImpuesto($impuesto){
 			$this->impuesto = $impuesto;
@@ -110,13 +110,13 @@
 			$this->precioVenta = $precioVenta;
 		}
 		public function getTipoPresentacion(){
-			return $this->tipoPresentacion;
+			return $tipoPresentacion;
 		}
 		public function setTipoPresentacion($tipoPresentacion){
 			$this->tipoPresentacion = $tipoPresentacion;
 		}
 		public function getLaboratorio(){
-			return $this->laboratorio;
+			return $laboratorio;
 		}
 		public function setLaboratorio($laboratorio){
 			$this->laboratorio = $laboratorio;
@@ -134,7 +134,7 @@
 			$this->fechaVencimiento = $fechaVencimiento;
 		}
 		public function getDosis(){
-			return $this->dosis;
+			return $dosis;
 		}
 		public function setDosis($dosis){
 			$this->dosis = $dosis;
@@ -146,25 +146,25 @@
 			$this->indicaciones = $indicaciones;
 		}
 		public function getEstado(){
-			return $this->estado;
+			return $estado;
 		}
 		public function setEstado($estado){
 			$this->estado = $estado;
 		}
 		public function getIngredientes(){
-			return $this->ingredientes;
+			return $ingredientes;
 		}
 		public function setIngredientes($ingredientes){
 			$this->ingredientes = $ingredientes;
 		}
 		public function getDolencias(){
-			return $this->dolencias;
+			return $dolencias;
 		}
 		public function setDolencias($dolencias){
 			$this->dolencias = $dolencias;
 		}
 		public function getTipoVenta(){
-			return $this->tipoVenta;
+			return $tipoVenta;
 		}
 		public function setTipoVenta($tipoVenta){
 			$this->tipoVenta = $tipoVenta;
@@ -203,8 +203,89 @@
 			);
 			
 			$fila = $conexion->obtenerFila($resultado);
-			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Producto" value="'.($fila["id"]+1).'">';
+			$codigoA = ($fila["id"]+1);
+			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Producto" value="'.$codigoA.'" id="txt-codigo-producto">';
 			}
+
+		public function guardarRegistro($conexion){
+			$sql = sprintf(
+				"INSERT INTO tbl_productos 
+						(
+							codigo_producto, codigo_presentacion, codigo_imagen, codigo_estado, codigo_tipo_venta, codigo_descuento, codigo_impuesto, codigo_dosis, codigo_laboratorio, fotografia, codigo_barra, nombre_producto, cantidad_producto, precio_compra, precio_venta, fecha_ingreso, fecha_vencimiento, indicaciones_producto
+						) VALUES (
+							NULL, '%s', '%s', '%s', '%s', '%s', '%s','%s','%s','%s','%s','%s','%s',
+							'%s', '%s', '%s', '%s'
+						)",
+						stripslashes($this->codigo_producto),
+						stripslashes($this->TipoPresentacion->getCodigoPresentacion()),
+						stripslashes($this->imagen->getCodigoImagen()),
+						stripslashes($this->estado->getCodigoEstado()),
+						stripslashes($this->tipoVenta->getCodigoTipoVenta()),
+						stripslashes($this->descuento->getCodigoDescuento()),
+						stripslashes($this->impuesto->getCodigoImpuesto()),
+						stripslashes($this->dosis->getCodigoDosis()),
+						stripslashes($this->laboratorio->getCodigoLaboratorio()),
+						stripslashes($this->fotografia),
+						stripslashes($this->codigoBarraProducto),
+						stripslashes($this->nombreProducto),
+						stripslashes($this->cantidadProducto),
+						stripslashes($this->precioCompra),
+						stripslashes($this->precioVenta),
+						stripslashes($this->fechaIngreso),						
+						stripslashes($this->fechaVencimiento),
+						stripslashes($this->indicaciones)
+				);
+			echo "<br>Instruccion a ejecutar: ".$sql;
+			$resultado = $conexion->ejecutarInstruccion($sql);
+			if($resultado){
+				echo "<b>Registro almacenado con exito</b>";
+			}else{
+				echo "Error al guardar el registro";
+				exit;
+			}
+			//Es necesario obtener el ultimo ID agregado:
+			$resultado = $conexion->ejecutarInstruccion("SELECT last_insert_id() as id;");
+			$fila = $conexion->obtenerFila($resultado);
+
+			//Las categorias es un arreglo que contiene los codigos de las categorias que 
+			//selecciono el usuario. Por cada categoria tendria
+			//que guardar un registro
+			if ($fila["id"]>0){
+				for ($i=0;$i<count($this->categoria);$i++){
+					$sql = sprintf(
+						"INSERT INTO tbl_categorias_x_aplicacion(codigo_categoria, 
+									codigo_aplicacion) VALUES ('%s','%s')",
+						stripslashes($this->categoria[$i]),
+						stripslashes($fila["id"])						
+					);
+					$conexion->ejecutarInstruccion($sql);
+				}
+			}
+		}
 		
+		public function actualizarRegistro($conexion){
+			/*$sql = sprintf(
+					"UPDATE tbl_productos 
+					SET codigo_presentacion='%s',codigo_imagen='%s',codigo_estado='%s',codigo_tipo_venta='%s',codigo_descuento='%s',codigo_impuesto='%s',codigo_dosis='%s',codigo_laboratorio='%s',fotografia='%s',codigo_barra='%s',nombre_producto='%s',cantidad_producto='%s',precio_compra='%s',precio_venta='%s',fecha_ingreso='%s',fecha_vencimiento='%s',indicaciones_producto='%s' 
+					WHERE codigo_producto='%s';,
+						stripslashes($this->desarrollador->getNombreUsuario()),//mysqli_magic_quotes, mysqli_real_....
+						stripslashes($this->nombreProducto),
+						stripslashes($this->descripcion),
+						stripslashes($this->fechaPublicacion),
+						stripslashes($this->fechaActualizacion),
+						stripslashes($this->version),
+						stripslashes($this->URLProducto),
+						stripslashes($this->icono->getURLImagen()),
+						stripslashes($this->calificacionPromedio),
+						stripslashes($this->)
+				);
+			echo "<br>Instruccion a ejecutar: ".$sql;
+			$resultado = $conexion->ejecutarInstruccion($sql);
+			if($resultado){
+				echo "<b>Registro actualizado con exito</b>";
+			}else{
+				echo "Error al actualizar el registro";
+				exit;*/
+			}
 	}
 ?>

@@ -1,5 +1,6 @@
 <?php
-
+    include_once("class_Persona.php");
+    
 	class Empleado extends Persona{
 
 		private $codigoEmpleado;
@@ -81,7 +82,7 @@
 			$this->tipoContrato = $tipoContrato;
 		}
 		public function getJornada(){
-			return $this->jornada;
+			return $jornada;
 		}
 		public function setJornada($jornada){
 			$this->jornada = $jornada;
@@ -105,7 +106,7 @@
 			$this->sueldo = $sueldo;
 		}
 		public function getTipoAcceso(){
-			return $this->tipoAcceso;
+			return $tipoAcceso;
 		}
 		public function setTipoAcceso($tipoAcceso){
 			$this->tipoAcceso = $tipoAcceso;
@@ -129,12 +130,35 @@
 				" Profesion: " . $this->profesion->toString() . 
 				" FechaInicio: " . $this->fechaInicio . 
 				" TipoContrato: " . $this->tipoContrato . 
-				" Jornada: " . $this->jornada . 
+				" Jornada: " . $this->jornada->toString() . 
 				" JefeSuperior: " . $this->jefeSuperior . 
 				" Recomendaciones: " . $this->recomendaciones->toString() . 
 				" Sueldo: " . $this->sueldo . 
-				" TipoAcceso: " . $this->tipoAcceso.
+				" TipoAcceso: " . $this->tipoAcceso->toString() .
 				"Sucursal: " . $this->sucursal->toString();
 		}
+		public static function  obtenerCodigo($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT MAX(codigo_empleado) AS id FROM tbl_empleados")			
+			);
+			
+			$fila = $conexion->obtenerFila($resultado);
+			$codigoA = ($fila["id"]+1);
+			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Empleado" value="'.$codigoA.'" id="txt-codigo-empleado">';
+			}
+			
+		public static function generarListaEmpleados($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_empleado, nombre_empleado 
+				FROM tbl_empleados")			
+			);
+			echo '<select name="" id="slc-empleados-2" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_empleado"].'">'.
+					$fila["nombre_empleado"].'</option>';
+			}
+			echo '</select>';
+		}
+		
 	}
 ?>

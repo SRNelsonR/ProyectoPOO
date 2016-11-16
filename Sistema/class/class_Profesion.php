@@ -32,5 +32,18 @@
 			return "CodigoProfesion: " . $this->codigoProfesion . 
 				" NombreProfesion: " . $this->nombreProfesion;
 		}
+		public static function generarListaProfesiones($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_profesion, nombre_profesion 
+				FROM tbl_profesiones")			
+			);
+			echo '<select name="" id="slc-profesion" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_profesion"].'">'.
+					$fila["nombre_profesion"].'</option>';
+			}
+			echo '</select>';
+
+		}
 	}
 ?>

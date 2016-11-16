@@ -49,5 +49,14 @@
 			echo '</select>';
 
 		}
+		public static function  obtenerCodigo($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT MAX(codigo_impuesto) AS id FROM tbl_impuestos")			
+			);
+			
+			$fila = $conexion->obtenerFila($resultado);
+			$codigoA = ($fila["id"]+1);
+			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Empleado" value="'.$codigoA.'" id="txt-codigo-impuesto">';
+			}
 	}
 ?>

@@ -62,5 +62,18 @@
 				" TelefonoSucursal: " . $this->telefonoSucursal . 
 				" CorreoSucursal: " . $this->correoSucursal;
 		}
+		
+		public static function generarListaSucursales($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_sucursal, nombre_sucursal 
+				FROM tbl_sucursales")			
+			);
+			echo '<select name="" id="slc-sucursales" class="form-control">';
+			while($fila = $conexion->obtenerFila($resultado)){
+				echo '<option value="'.$fila["codigo_sucursal"].'">'.
+					$fila["nombre_sucursal"].'</option>';
+			}
+			echo '</select>';
+		}
 	}
 ?>
