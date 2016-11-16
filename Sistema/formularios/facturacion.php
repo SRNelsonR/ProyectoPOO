@@ -139,7 +139,7 @@
                                 Farmacia Max Util ""
                             </div>
 
-                            <<form class="form-horizontal" role="form" id="datos_factura">
+                            <form class="form-horizontal" role="form" id="datos_factura">
                     <div class="form-group row">
                       <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
                       <div class="col-md-3">
@@ -156,7 +156,7 @@
                                 </div>
                      </div>
                             <div class="form-group row">
-                                <label for="empresa" class="col-md-1 control-label">Vendedor</label>
+                                <label for="empresa" class="col-md-1 control-label">Cajero</label>
                                 <div class="col-md-3">
                                     <select class="form-control input-sm" id="id_vendedor">
                                         <?php
@@ -185,7 +185,6 @@
                                     <select class='form-control input-sm' id="condiciones">
                                         <option value="1">Efectivo</option>
                                         <option value="2">Cheque</option>
-                                        <option value="3">Transferencia bancaria</option>
                                         <option value="4">Crédito</option>
                                     </select>
                                 </div>
@@ -206,6 +205,14 @@
                             <button type="submit" class="btn btn-default">
                               <span class="glyphicon glyphicon-print"></span> Imprimir
                             </button>
+                        <button type="submit" class="btn btn-default">
+                              <span class="glyphicon glyphicon-print"></span> Salir
+                            </button>
+                            <button type="submit" class="btn btn-default">
+                              <span class="glyphicon glyphicon-print"></span> limpiar
+                            </button>
+
+
                         </div>  
                     </div>
                 </form> 
@@ -215,7 +222,7 @@
         </div>      
               <div class="row-fluid">
                 <div class="col-md-12">
-                
+
 
 
                     <button type="submit" class="btn btn-default">Total</button>
