@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
+    <title>Farmacia MaxUtil | Administrador</title>
     <!-- Core CSS - Include with every page -->
     <link href="../css/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -23,13 +23,13 @@
             <!-- navbar-header -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Navegacion MaxUtil </span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="../img/logoMaxUtil.png" alt="" />
+                <a class="navbar-brand" href="../formularios/administrador.php" >
+                    <img src="../img/logoMaxUtil.png" alt="" width="150" style="height: 50px;" />
                 </a>
             </div>
             <!-- end navbar-header -->
@@ -115,78 +115,12 @@
                     </ul>
                     <!-- end dropdown-tasks -->
                 </li>
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
-                    </a>
-                    <!-- dropdown alerts-->
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i>New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i>New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-alerts -->
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-3x"></i>
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                        </li>
                         <li class="divider"></li>
                         <li><a href="../index.php"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
@@ -267,7 +201,7 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Configuracion del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/forms7.html">Configuracion del ISV</a>
+                                <a href="../class/forms7.php">Configuracion del ISV</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -276,7 +210,7 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i>Graficos del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/morris.html">Ir a Graficos</a>
+                                <a href="../class/morris.php">Ir a Graficos</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -285,13 +219,13 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Consultas<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/tables.html">Precio Productos</a>
+                                <a href="../class/tables.php">Precio Productos</a>
                             </li>
                             <li>
-                                <a href="../class/tables1.html">Productos Inexistentes</a>
+                                <a href="../class/tables1.php">Productos Inexistentes</a>
                             </li>
                             <li>
-                                <a href="../class/tables2.html">Productos por Dolencia</a>                                
+                                <a href="../class/tables2.php">Productos por Dolencia</a>                                
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -300,10 +234,10 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/flot.html">Listado de Productos</a>
+                                <a href="../class/flot.php">Listado de Productos</a>
                             </li>
                             <li>
-                                <a href="../class/morris.html">Listado de Clientes</a>
+                                <a href="../class/morris.php">Listado de Clientes</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
