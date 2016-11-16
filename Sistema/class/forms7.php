@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
+    <title>Farmacia MaxUtil | Impuestos</title>
     <!-- Core CSS - Include with every page -->
     <link href="../css/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -284,7 +284,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    
                                         <div class="form-group">
                                             <label>Codigo ISV:</label>
                                             <?php
@@ -293,18 +293,19 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nombre del ISV:</label>
-                                            <input class="form-control" placeholder="Escriba el Nombre del ISV">
+                                            <input class="form-control" placeholder="Escriba el Nombre del ISV" id="txt-nombre-impuesto">
                                         </div>
                                         <div class="form-group">
                                             <label>Porcentaje de ISV:</label>
-                                            <input class="form-control" placeholder="Escriba el Porcentaje del ISV">
+                                            <input class="form-control" placeholder="Escriba el Porcentaje del ISV" id="txt-porcentaje-impuesto">
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-primary" id="btn-guardar-impuesto">Guardar</button>
                                         <button type="reset" class="btn btn-success">Limpiar</button>
-                                    </form>
+                                    
                                 </div>
-
- 
+                                <div class="col-lg-6">
+                                    <div id="div-resultadoImpuesto" name="div-resultadoImpuesto"></div> 
+                                </div>  
                 </div>
             </div>
         </div>
@@ -319,6 +320,8 @@
     <script src="../css/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="../css/plugins/pace/pace.js"></script>
     <script src="../js/scripts/siminta.js"></script>
+    <script src="../js/adminControlador.js"></script>
+
 
 </body>
 

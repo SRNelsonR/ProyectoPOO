@@ -247,9 +247,6 @@
 			$resultado = $conexion->ejecutarInstruccion("SELECT last_insert_id() as id;");
 			$fila = $conexion->obtenerFila($resultado);
 
-			//Las categorias es un arreglo que contiene los codigos de las categorias que 
-			//selecciono el usuario. Por cada categoria tendria
-			//que guardar un registro
 			if ($fila["id"]>0){
 				for ($i=0;$i<count($this->categoria);$i++){
 					$sql = sprintf(

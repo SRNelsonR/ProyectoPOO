@@ -58,5 +58,25 @@
 			$codigoA = ($fila["id"]+1);
 			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Empleado" value="'.$codigoA.'" id="txt-codigo-impuesto">';
 			}
+			
+		public static function guardarRegistro($conexion){
+			$sql = sprintf("INSERT INTO tbl_impuestos(
+							codigo_impuesto, nombre_impuesto, porcentaje_impuesto) 
+							VALUES ('%s','%s','%s')",
+				stripslashes($this->codigoImpuesto),
+				stripslashes($this->nombreImpuesto),
+				stripslashes($this->porcentajeImpuesto)
+				);
+			echo "<br>Instruccion a ejecutar: ". $sql;
+
+			$resultado = $conexion->ejecutarInstruccion($sql);
+
+			if($resultado){
+				echo "<b>Registro almacenado con exito</b>";
+			}else{
+				echo "Error al guardar el registro";
+				exit;
+			}
+		}
 	}
 ?>

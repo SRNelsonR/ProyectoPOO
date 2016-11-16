@@ -13,8 +13,27 @@
 		    include_once("class_Laboratorio.php");
 		    include_once("class_ingrediente.php");
 		    include_once("class_tipo_venta.php");
+
 			$conexion = new Conexion();
-			$producto = new Producto(
+
+			$sql = sprintf("INSERT INTO tbl_impuestos(
+							codigo_impuesto, nombre_impuesto, porcentaje_impuesto) 
+							VALUES ('%s','%s','%s')",
+				stripslashes($_POST["txt-codigo-impuesto"]),
+				stripslashes($_POST["txt-nombre-impuesto"]),
+				stripslashes($_POST["txt-porcentaje-impuesto"])
+				);
+
+			$resultado = $conexion->ejecutarInstruccion($sql);
+
+			if($resultado){
+				echo "<b>Registro almacenado con exito</b>";
+			}else{
+				echo "Error al guardar el registro";
+				exit;
+			}
+
+			/*$producto = new Producto(
 					$_POST["txt-codigo-producto"],
 					$_POST["txt-codigo-barra"],
 					$_POST["txt-nombre-producto"],
@@ -33,17 +52,17 @@
 					$_POST["ingredientes"],//Ingredientes, esto es un arreglo
 					$_POST["dolencias"],//Dolencias, esto es un arreglo
 					new TipoVenta(null,$_POST["slc-tipo-ventas"]),				
-					$_POST["txt-fotografia"]
+					null//$_POST["txt-fotografia"]
 			);
 
 			echo "Ingredientes: " . var_dump($_POST["ingredientes"]);
 
-			$producto->guardarRegistro($conexion);			
+			$producto->guardarRegistro($conexion);	*/		
 
 			break;
 		//Actualizar
 		case '2':
-			# code...
+			
 			break;
 		//Eliminar
 		case '3':

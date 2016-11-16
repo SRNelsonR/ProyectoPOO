@@ -424,7 +424,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div role="form">
+                                    <div role="form" id="div-productos">
                                         <div class="form-group" id="txt-codigo-producto">
                                             <label>Codigo Producto:</label>
                                             <?php
@@ -464,7 +464,7 @@
                                         <label>Precio de Venta:</label><br>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">L.</span>
-                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Venta del Producto" id="txt-precio-venta-producto" disabled="disabled">
+                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Venta del Producto" id="txt-precio-venta-producto">
                                             <span class="input-group-addon">.00</span>
                                         </div>
                                         <div class="form-group">
