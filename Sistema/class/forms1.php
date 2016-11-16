@@ -1,145 +1,10 @@
 <?php
-    //VERIFICACIONES
- /*  sleep(5);
-    $valCodigoBarra = validarInformacion($_GET["txt-codigo-barra"]);
-        if(!$valCodigoBarra)
-            echo "Codigo de Barra del Producto no ingresado<br>";
-        else
-            echo "Codigo de Barra del Producto: " . $_GET["txt-codigo-barra"] . "<br>";
-
-    $valNombre = validarInformacion($_GET["txt-nombre-producto"]);
-        if(!$valNombre)
-            echo "Nombre del Producto no ingresado<br>";
-        else
-            echo "Nombre del Producto: " . $_GET["txt-nombre-producto"] . "<br>";
-
-    $valCantidad = validarInformacion($_GET["txt-cantidad-producto"]);
-        if(!$valCantidad)
-            echo "Cantidad del Producto no ingresada<br>";
-        else
-            echo "Cantidad del Producto: " . $_GET["txt-cantidad-producto"] . "<br>";
-
-    $valPrecioCompra = validarInformacion($_GET["txt-precio-compra-producto"]);
-        if(!$valPrecioCompra)
-            echo "Precio de Compra no ingresado<br>";
-        else
-            echo "Precio de Compra: " . $_GET["txt-precio-compra-producto"] . "<br>";
-
-    $valPrecioVenta = validarInformacion($_GET["txt-precio-venta-producto"]);
-        if(!$valPrecioVenta)
-            echo "Precio de Venta no ingresado<br>";
-        else
-            echo "Precio de Venta: " . $_GET["txt-precio-venta-producto"] . "<br>";
-
-    $valTipoPresentacion = validarInformacion($_GET["slc-tipo-presentacion-producto"]);
-        if(!$valTipoPresentacion)
-            echo "Tipo de Presentacion no ingresado<br>";
-        else
-            echo "Tipo de Presentacion: " . $_GET["slc-tipo-presentacion-producto"] . "<br>";
-
-    $valLaboratorio = validarInformacion($_GET["slc-laboratorios"]);
-        if(!$valLaboratorio)
-            echo "Laboratorio no ingresado<br>";
-        else
-            echo "Laboratorio: " . $_GET["slc-laboratorios"] . "<br>";
-
-    $valFechaIngreso = validarInformacion($_GET["txt-fecha-ingreso-producto"]);
-        if(!$valFechaIngreso)
-            echo "Fecha de Ingreso del Producto no ingresado<br>";
-        else
-            echo "Fecha de Ingreso del Producto: " . $_GET["txt-fecha-ingreso-producto"] . "<br>";
-
-    $valFechaVencimiento = validarInformacion($_GET["txt-fecha-vencimiento-producto"]);
-        if(!$valFechaVencimiento)
-            echo "Fecha de Vencimiento del Producto no ingresado<br>";
-        else
-            echo "Fecha de Vencimiento del Producto: " . $_GET["txt-fecha-vencimiento-producto"] . "<br>";
-
-    $valDosis = validarInformacion($_GET["slc-dosis-producto"]);
-        if(!$valDosis)
-            echo "Dosis no ingresado<br>";
-        else
-            echo "Dosis: " . $_GET["slc-dosis-producto"] . "<br>";
-
-    $valIndicaciones = validarInformacion($_GET["txt-indicaciones-producto"]);
-        if(!$valIndicaciones)
-            echo "Indicaciones del Producto no ingresado<br>";
-        else
-            echo "Indicaciones del Producto: " . $_GET["txt-indicaciones-producto"] . "<br>";
-
-    $valEstado = validarInformacion($_GET["slc-estado-producto"]);
-        if(!$valEstado)
-            echo "Estado del Producto no ingresado<br>";
-        else
-            echo "Estado del Producto: " . $_GET["slc-estado-producto"] . "<br>";
-
-    $valIngredientes = validarInformacion($_GET["chk-ingredientes"]);
-        if(!$valIngredientes)
-            echo "Ingredientes del Producto no ingresado<br>";
-        else
-            echo "Ingredientes del Producto: " . $_GET["chk-ingredientes"] . "<br>";
-
-    $valDolencias = validarInformacion($_GET["chk-dolencias"]);
-        if(!$valDolencias)
-            echo "Dolencias del Producto no ingresado<br>";
-        else
-            echo "Dolencias del Producto: " . $_GET["chk-dolencias"] . "<br>";
-
-    $valTipoVenta = validarInformacion($_GET["slc-tipo-venta"]);
-        if(!$valTipoVenta)
-            echo "Tipo de Venta del Producto no ingresado<br>";
-        else
-            echo "Tipo de Venta del Producto: " . $_GET["slc-tipo-venta"] . "<br>";
-
-    $valDescuento = validarInformacion($_GET["slc-descuentos"]);
-        if(!$valDescuento)
-            echo "Descuento del Producto no ingresado<br>";
-        else
-            echo "Descuento del Producto: " . $_GET["slc-descuentos"] . "<br>";
-
-    $valImpuesto = validarInformacion($_GET["slc-impuestos"]);
-        if(!$valImpuesto)
-            echo "Impuesto del Producto no ingresado<br>";
-        else
-            echo "Impuesto del Producto: " . $_GET["slc-impuestos"] . "<br>";
-
-    $valFotografia = validarInformacion($_GET["txt-fotografia"]);
-        if(!$valFotografia)
-            echo "Fotografia del Producto no ingresado<br>";
-        else
-            echo "Fotografia del Producto: " . $_GET["txt-fotografia"] . "<br>";
-
-    if( $valNombre==true && 
-        $valDescripcion==true && 
-        $valFechaPublicacion==true && 
-        $valClasificacion==true && 
-        $valUrl==true && 
-        $valTamanio==true && 
-        $valVersion==true && 
-        $valFechaActualizacion==true){
-        echo "Informacion Completa";
-    }else{
-        echo "Informacion Incompleta";
-    }
-
-    function validarInformacion($valor){
-        if(trim($valor) == "")
-            return false;
-        else
-            return true;
-    }
-*/
     include_once("class_conexion.php");
-    include_once("class_descuento.php");
-    include_once("class_impuesto.php");
-    include_once("class_dosis.php");
-    include_once("class_TipoPresentacion.php");
-    include_once("class_Producto.php");
-    include_once("class_estado.php");
-    include_once("class_Dolencia.php");
-    include_once("class_Laboratorio.php");
-    include_once("class_ingrediente.php");
-    include_once("class_tipo_venta.php");
+    include_once("class_cliente.php");
+    include_once("class_Persona.php");
+    include_once("class_estado_civil.php");
+    include_once("class_genero.php");
+    
 
     $conexion = new Conexion();
 ?>
@@ -149,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacia MaxUtil | Producto</title>
+    <title>Farmacia MaxUtil | Cliente </title>
     <!-- Core CSS - Include with every page -->
     <link href="../css/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -162,7 +27,7 @@
 </head>
 
 <body>
-   <!--  wrapper -->
+    <!--  wrapper -->
     <div id="wrapper">
         <!-- navbar top -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
@@ -403,13 +268,12 @@
             <!-- end sidebar-collapse -->
         </nav>
         <!-- end navbar side -->
-        
         <!--  page-wrapper -->
           <div id="page-wrapper">
             <div class="row">
                  <!-- page header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Productos</h1>
+                    <h1 class="page-header">Registro de Clientes</h1>
                 </div>
                 <!--end page header -->
             </div>
@@ -418,123 +282,88 @@
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Registro de Productos
+                            Datos Personales del Cliente
                         </div>
 
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div role="form">
-                                        <div class="form-group" id="txt-codigo-producto">
-                                            <label>Codigo Producto:</label>
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Codigo Cliente:</label>
                                             <?php
-                                                Producto::obtenerCodigo($conexion);
+                                            Cliente::obtenerCodigo($conexion);
                                             ?>
                                         </div>
                                         <div class="form-group">
-                                            <label>Codigo de Barra del Producto:</label>
-                                            <input class="form-control" placeholder="Codigo del Producto" id="txt-codigo-barra" value="<?php ?>">
+                                            <label>Nombre:</label>
+                                            <input class="form-control" placeholder="Escriba el Nombre del Cliente" id="txt-nombre-cliente">
                                         </div>
                                         <div class="form-group">
-                                            <label>Nombre Producto:</label>
-                                            <input class="form-control" placeholder="Escriba el Nombre del Producto" id="txt-nombre-producto">
+                                            <label>Apellido:</label>
+                                            <input class="form-control" placeholder="Escriba el Apellido del Cliente" id="txt-apellido-cliente">
                                         </div>
                                         <div class="form-group">
-                                            <label>Cantidad Producto:</label>
-                                            <input class="form-control" placeholder="Escriba la Cantidad del Producto" id="txt-cantidad-producto">
-                                        </div>
-                                        <label>Precio de Compra:</label><br>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">L.</span>
-                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Compra del Producto" id="txt-precio-compra-producto">
-                                            <span class="input-group-addon">.00</span>
+                                            <label>Edad:</label>
+                                            <input class="form-control" placeholder="Escriba la Edad del Cliente" id="txt-edad">
                                         </div>
                                         <div class="form-group">
-                                            <label>Descuento:</label>
+                                            <label>N° Identificacion:</label>
+                                            <input class="form-control" placeholder="Escriba el Numero de Identificacion del Cliente" id="txt-identificacion-cliente">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Domicilio:</label>
+                                            <input class="form-control" placeholder="Escriba el Domicilio del Cliente" id="txt-domicilio-cliente">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Telefono:</label>
+                                            <input class="form-control" placeholder="Escriba el Telefono del Cliente" id="txt-telefono-cliente">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Estado Civil: </label>
                                             <?php
-                                            Descuento::generarListaDescuentos($conexion);
+                                                EstadoCivil::generarListaEstadoCivil($conexion);
                                             ?>
                                         </div>
                                         <div class="form-group">
-                                            <label>Impuesto:</label>
-                                            <?php
-                                            Impuesto::generarListaImpuestos($conexion);
-                                            ?>
-                                        </div>
-                                        <label>Precio de Venta:</label><br>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">L.</span>
-                                            <input type="text" class="form-control" placeholder="Escriba el Precio de Venta del Producto" id="txt-precio-venta-producto" disabled="disabled">
-                                            <span class="input-group-addon">.00</span>
+                                            <label>Correo Electrónico:</label>
+                                            <input class="form-control" placeholder="Escriba el correo del Cliente">
                                         </div>
                                         <div class="form-group">
-                                            <label>Tipo Presentacion:</label>
-                                            <?php
-                                            TipoPresentacion::generarListaPresentaciones($conexion);
-                                            ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Laboratorio: </label>
-                                            <?php
-                                            Laboratorio::generarListaLaboratorios($conexion);
-                                            ?>
+                                            <label>Fecha de Nacimiento:</label>
+                                            <input class="form-control" type="date" >
                                         </div>
                                         <div class="form-group">
                                             <label>Fecha de Ingreso:</label>
-                                            <input class="form-control" type="date" id="txt-fecha-ingreso-producto">
+                                            <input class="form-control" type="date">
                                         </div>
                                         <div class="form-group">
-                                            <label>Fecha de Vencimiento:</label>
-                                            <input class="form-control" type="date" id="txt-fecha-vencimiento-producto">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Dosis Producto:</label>
+                                            <label>Genero: </label>
                                             <?php
-                                            Dosis::generarListaDosis($conexion);
+                                                Genero::generarListaGeneros($conexion);
                                             ?>
                                         </div>
                                         <div class="form-group">
-                                            <label>Indicaciones Producto:</label>
-                                            <textarea class="form-control" placeholder="Escriba las Indicaciones del Producto" id="txt-indicaciones-producto"></textarea>
+                                            <label>Usuario:</label>
+                                            <input class="form-control" placeholder="Escriba el usuario del Cliente">
                                         </div>
                                         <div class="form-group">
-                                            <label>Estado</label>
-                                            <?php
-                                            Estado::generarListaEstados($conexion);
-                                            ?>
+                                            <label>Contraseña:</label>
+                                            <input class="form-control" type="password" placeholder="Escriba la contraseña del Cliente">
                                         </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Ingredientes: </label>
-                                            <?php
-                                            Ingrediente::generarListaIngredientes($conexion);
-                                            ?>                                            
+                                         <div class="form-group">
+                                            <label>Codigo Membresia:</label>
+                                            <input class="form-control" placeholder="Escriba el codigo de Membresia del Cliente">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Dolencias</label>
-                                            <?php
-                                            Dolencia::generarListaDolencias($conexion);
-                                            ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tipo Venta</label>
-                                            <?php
-                                            TipoVenta::generarListaTipoVentas($conexion);
-                                            ?>
-                                        </div>
-                                        
                                         <div class="form-group">
                                             <label>Fotografia:</label>
-                                            <input type="file" id="txt-fotografia">
+                                            <input type="file">
                                         </div>
-                                        <button type="button" class="btn btn-primary" id="btn-guardar-producto">Guardar</button>
-                                        <button id="btn-actualizar" class="btn btn-primary" style="display:none;">Actualizar</button>
-                                        <button type="reset" class="btn btn-success">Cancelar</button>
-                                    </div>
-                                <div class="col-lg-6">
-                                    <div id="div-resultadoProducto" name="div-resultadoProducto"></div> 
-                                </div>                                   
-                            </div>                            
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="reset" class="btn btn-success">Limpiar</button>
+                                    </form>
+                                </div>
+                    </div>
                 </div>
             </div>
         </div>
