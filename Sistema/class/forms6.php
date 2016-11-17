@@ -273,6 +273,7 @@
                 </div>
                 <!--end page header -->
             </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Form Elements -->
@@ -283,21 +284,21 @@
 
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
+                                <div class="col-lg-6" id="div-estados">
+                                    
                                         <div class="form-group">
                                             <label>Codigo Estado:</label>
                                             <?php
                                             Estado::obtenerCodigo($conexion);
                                             ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Nombre:</label>
+                                        
+                                        <label>Nombre:</label>
                                             <input class="form-control" placeholder="Escriba el Nombre del Estado">
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="submit" class="btn btn-primary" id="btn-guardar-estado" >Guardar</button>
                                         <button type="reset" class="btn btn-success">Limpiar</button>
-                                    </form>
+                                   
+                                
                                 </div>
 
  

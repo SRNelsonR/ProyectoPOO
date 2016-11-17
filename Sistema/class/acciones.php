@@ -1,7 +1,4 @@
 <?php
-	switch ($_GET["accion"]) {
-		//Guardar 
-		case '1':
 			include_once("class_conexion.php");
 		    include_once("class_descuento.php");
 		    include_once("class_impuesto.php");
@@ -13,8 +10,14 @@
 		    include_once("class_Laboratorio.php");
 		    include_once("class_ingrediente.php");
 		    include_once("class_tipo_venta.php");
-
 			$conexion = new Conexion();
+
+
+	switch ($_GET["accion"]) {
+		//Guardar 
+		case '1':
+			
+
 
 			$sql = sprintf("INSERT INTO tbl_impuestos(
 							codigo_impuesto, nombre_impuesto, porcentaje_impuesto) 
@@ -60,8 +63,20 @@
 			$producto->guardarRegistro($conexion);	*/		
 
 			break;
-		//Actualizar
+		//Guardar estado
 		case '2':
+
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("INSERT INTO tbl_estados
+					(codigo_estado, nombre_estado) 
+					VALUES (NULL,'%s')",
+					stripslashes($_POST["txt-codigo-estado"]))
+				);
+
+			if ($resultado) {
+				echo "Registro guardado";
+			}else
+				echo "Registro no guardado";
 			
 			break;
 		//Eliminar
