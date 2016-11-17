@@ -266,7 +266,7 @@
             <div class="row">
                  <!--  page header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Productos por Dolencia</h1>
+                    <h1 class="page-header">Productos Existentes</h1>
                 </div>
                  <!-- end  page header -->
             </div>
@@ -282,23 +282,44 @@
                                 <?php
                                 include_once("class_conexion.php");
                                 $conexion = new Conexion();
-
+                                    /*SELECT a.codigo_producto, b.nombre_presentacion, a.codigo_imagen, c.nombre_estado, d.nombre_tipo_venta,
+                                     e.nombre_descuento, f.codigo_impuesto, g.nombre_dosis, h.nombre_laboratorio, a.fotografia, a.codigo_barra,
+                                      a.nombre_producto, a.cantidad_producto, a.precio_compra, a.precio_venta, a.fecha_ingreso, a.fecha_vencimiento,
+                                       a.indicaciones_producto
+                                    FROM a.tbl_productos 
+                                    INNER JOIN b.tbl_presentaciones
+                                    ON a.codigo_presentacion= b.codigo_presentacion
+                                    INNER JOIN c.tbl_estados
+                                    ON a.codigo_estado= c.codigo_estado
+                                    INNER JOIN d.tbl_tipo_ventas
+                                    ON a.codigo_tipo_venta= d.codigo_tipo_venta
+                                    INNER JOIN e.tbl_descuentos
+                                    ON a.codigo_descuento= e.codigo_descuento
+                                    INNER JOIN f.tbl_impuestos
+                                    ON a.codigo_impuesto= f.codigo_impuesto
+                                    INNER JOIN g.tbl_dosis
+                                    ON a.codigo_dosis= g.codigo_dosis
+                                    INNER JOIN h.tbl_laboratorios
+                                    ON a.codigo_laboratorio= h.codigo_laboratorio*/
                                 $resultado = $conexion->ejecutarInstruccion(
-                                    "SELECT tbl_dolencias_codigo_dolencia as codigo_dolencia,nombre_dolencia, nombre_producto
-                                    FROM dolencias_x_productos
-                                    INNER JOIN tbl_dolencias
-                                    ON (tbl_dolencias_codigo_dolencia= codigo_dolencia)
-                                    INNER JOIN tbl_productos
-                                    ON (tbl_productos_codigo_producto= codigo_producto)
-                                    order by nombre_dolencia"               
+                                    "SELECT codigo_producto, codigo_barra, nombre_producto,
+                                    cantidad_producto, precio_compra, precio_venta, fecha_ingreso, fecha_vencimiento, indicaciones_producto
+                                     FROM tbl_productos "               
                                     );
                                     ?>
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>Codigo Dolencia</th>
-                                            <th>Nombre Dolencia</th>
-                                            <th>Nombre Producto</th>                                            
+                                            <th>Codigo Producto</th>
+                                            
+                                            
+                                            <th>Codigo Barra</th>
+                                            <th>Nombre Producto</th>
+                                            <th>Cantidad Producto</th>
+                                            <th>Precio Compra</th>
+                                            <th>Precio Venta</th>
+                                            <th>Fecha Ingreso</th>
+                                            <th>Fecha Vencimiento</th>                                           
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -308,9 +329,15 @@
                                while($fila = $conexion->obtenerFila($resultado)){
                                     ?>
                                     <tr class="odd gradeX">
-                                            <td><?php echo $fila["codigo_dolencia"] ;?></td>
-                                            <td><?php echo $fila["nombre_dolencia"] ;?></td>
+                                            <td><?php echo $fila["codigo_producto"] ;?></td>                            
+                                          
+                                            <td><?php echo $fila["codigo_barra"] ;?></td>
                                             <td><?php echo $fila["nombre_producto"] ;?></td>
+                                            <td><?php echo $fila["cantidad_producto"] ;?></td>
+                                            <td><?php echo $fila["precio_venta"] ;?></td>
+                                            <td><?php echo $fila["precio_compra"] ;?></td>
+                                            <td><?php echo $fila["fecha_ingreso"] ;?></td>
+                                            <td><?php echo $fila["fecha_vencimiento"] ;?></td>
                                             
                                         </tr>
 
@@ -324,9 +351,9 @@
                         </div>
                     </div>
                     <!--End Advanced Tables -->
-                </div>            
-             </div>
-        </div>
+                </div>
+            </div>
+            </div>
         <!-- end page-wrapper -->
 
     </div>

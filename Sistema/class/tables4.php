@@ -4,14 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
+    <title>Farmacia MaxUtil | Tablas</title>
     <!-- Core CSS - Include with every page -->
     <link href="../css/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="../css/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
       <link href="../css/main-style.css" rel="stylesheet" />
 
+    <!-- Page-Level CSS -->
+    <link href="../css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 
 </head>
 
@@ -234,7 +236,7 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/flot.php">Listado de Productos</a>
+                                <a href="../class/tables3.php">Listado de Productos</a>
                             </li>
                             <li>
                                 <a href="../class/morris.php">Listado de Clientes</a>
@@ -258,55 +260,82 @@
         </nav>
         <!-- end navbar side -->
         <!--  page-wrapper -->
-        <div id="page-wrapper" >
+        <div id="page-wrapper">
+
+            
             <div class="row">
-            
-        
-            
-                <div class="col-lg-6">
-                    <!-- pie chart-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Pie Chart Example
-                        </div>
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-pie-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                      <!--end pie chart-->
-                </div>
-                <div class="col-lg-6">
-                     <!--  Multiple Axes Line Chart-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Multiple Axes Line Chart Example
-                        </div>
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-multi"></div>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- End Multiple Axes Line Chart-->
-                </div>
-                
+                 <!--  page header -->
                 <div class="col-lg-12">
-                    <!-- Bar Chart -->
+                    <h1 class="page-header">Clientes Existentes</h1>
+                </div>
+                 <!-- end  page header -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Bar Chart Example
+                             Buscar Tablas
                         </div>
                         <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-bar-chart"></div>
+                            <div class="table-responsive">
+                                <?php
+                                include_once("class_conexion.php");
+                                $conexion = new Conexion();
+                                    
+                                $resultado = $conexion->ejecutarInstruccion(
+                                    "SELECT codigo_cliente, nombre_cliente, apellido_cliente, 
+                                    identidad_cliente, fecha_nacimiento, edad_cliente, direccion, 
+                                    telefono, correo_electronico
+                                     FROM tbl_clientes"               
+                                    );
+                                    ?>
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>                                                                 
+                                            <th>Codigo Cliente</th>
+                                            <th>Nombre </th>
+                                            <th>Apellido</th>
+                                            <th>Identidad</th>
+                                            <th>Fecha Nacimiento</th>
+                                            <th>Edad</th>
+                                            <th>Direccion</th>                                           
+                                            <th>Telefono</th>                                           
+                                            <th>Correo</th>                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                    <?php
+                               while($fila = $conexion->obtenerFila($resultado)){
+                                    ?>
+                                    <tr class="odd gradeX">
+                                            <td><?php echo $fila["codigo_cliente"] ;?></td>   
+                                            <td><?php echo $fila["nombre_cliente"] ;?></td>
+                                            <td><?php echo $fila["apellido_cliente"] ;?></td>
+                                            <td><?php echo $fila["identidad_cliente"] ;?></td>
+                                            <td><?php echo $fila["fecha_nacimiento"] ;?></td>
+                                            <td><?php echo $fila["edad_cliente"] ;?></td>
+                                            <td><?php echo $fila["direccion"] ;?></td>
+                                            <td><?php echo $fila["telefono"] ;?></td>
+                                            <td><?php echo $fila["correo_electronico"] ;?></td>
+                                            
+                                        </tr>
+
+                                <?php
+                                }
+                                ?>
+                                    </tbody>
+                                </table>
                             </div>
+                            
                         </div>
                     </div>
-                     <!--End Bar Chart -->
+                    <!--End Advanced Tables -->
                 </div>
-        </div>
+            </div>
+            </div>
         <!-- end page-wrapper -->
 
     </div>
@@ -319,11 +348,13 @@
     <script src="../css/plugins/pace/pace.js"></script>
     <script src="../js/scripts/siminta.js"></script>
     <!-- Page-Level Plugin Scripts-->
-    <script src="../css/plugins/flot/jquery.flot.js"></script>
-    <script src="../css/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="../css/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="../css/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="../js/scripts/flot-demo.js"></script>
+    <script src="../css/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="../css/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
 
 </body>
 

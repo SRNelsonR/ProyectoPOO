@@ -380,7 +380,7 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/flot.php">Listado de Productos</a>
+                                <a href="../class/tables3.php">Listado de Productos</a>
                             </li>
                             <li>
                                 <a href="../class/morris.php">Listado de Clientes</a>

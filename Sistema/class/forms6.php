@@ -241,10 +241,10 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Reportes del Sistema<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../class/flot.php">Listado de Productos</a>
+                                <a href="../class/tables3.php">Listado de Productos</a>
                             </li>
                             <li>
-                                <a href="../class/morris.php">Listado de Clientes</a>
+                                <a href="../class/tables4.php">Listado de Clientes</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -293,7 +293,7 @@
                                             ?>
                                         
                                         <label>Nombre:</label>
-                                            <input class="form-control" placeholder="Escriba el Nombre del Estado">
+                                            <input class="form-control" placeholder="Escriba el Nombre del Estado" id="txt-nombre-estado">
                                         </div>
                                         <button type="submit" class="btn btn-primary" id="btn-guardar-estado" >Guardar</button>
                                         <button type="reset" class="btn btn-success">Limpiar</button>
