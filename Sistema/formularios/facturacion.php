@@ -231,7 +231,7 @@
     <tr>
       <th>Codigo</th>
       <th>Producto</th>
-      <th>Unidades</th>
+      <th>Cantidad</th>
       <th>Precio</th>
       <th>Precio total</th>
       <th></th>
@@ -265,19 +265,19 @@
 <th scope="row"></th>
       <td></td>
       <td></td>
-      <td>Impuesto:</td>
+      <td><strong>Impuesto:</strong></td>
     </tr>
 
     <th scope="row"></th>
       <td></td>
       <td></td>
-      <td>Descuento:</td>
+      <td><strong>Descuento:</strong></td>
     </tr>
 
     <th scope="row"></th>
       <td></td>
       <td></td>
-      <td>Total:</td>
+      <td><strong>Total: </strong></td>
     </tr>
 
   </tbody>

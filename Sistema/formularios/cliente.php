@@ -158,7 +158,7 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
+                        <a href="cliente.php"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Información<span class="fa arrow"></span></a>
@@ -175,9 +175,7 @@
                         </ul>
                         <!-- second-level-items -->
                     </li>
-                     <li>
-                        <a href="#"><i class="fa fa-table fa-fw"></i>Facturación</a>
-                    </li>
+                     
                     <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i>Consultas</a>
                     </li>
