@@ -214,10 +214,56 @@
                             <button type="submit" class="btn btn-default">
                             <span class="glyphicon glyphicon-remove"></span> Salir  
                             </button>
+                            </div>
+                            </div>
+
+                            <br>
 
 
-                        </div>  
+                                 <div class="col-md-8">
+
+                        <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Producto</th>
+      <th>Unidades</th>
+      <th>Precio</th>
+      <th>Precio total</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>Impuesto:</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>    
+</div>
+
                     </div>
+
                 </form> 
     
         <script>
