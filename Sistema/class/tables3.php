@@ -239,7 +239,7 @@
                                 <a href="../class/tables3.php">Listado de Productos</a>
                             </li>
                             <li>
-                                <a href="../class/morris.php">Listado de Clientes</a>
+                                <a href="../class/tables4.php">Listado de Clientes</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
