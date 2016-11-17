@@ -136,14 +136,17 @@
                         <!--factura    -->
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                Farmacia Max Util ""
+                                
+                                <a  href="nueva_factura.php" class="btn btn-info"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
+
                             </div>
                             
                             <div class="row">
                                 <div class="col-xs-5">
                                     <div class="panel panel-success">
                                         <div class="panel-heading">
-                                        <div class="panel-body">Estamos Ubicados en colonia Loarque ,Centro Comercial Lewis, Local No. 14 <br>
+                                        <div class="panel-body">Farmacia MaxUtil <br>
+                                        Estamos Ubicados en colonia Loarque ,Centro Comercial Lewis, Local No. 14 <br>
                                         
                                         Telefonos: 2258-6988, 2258-9685
                                                 
@@ -189,7 +192,7 @@
                                 <div class="col-md-3">
                                     <select class='form-control input-sm' id="condiciones">
                                         <option value="1">Efectivo</option>
-                                        <option value="2">Cheque</option>
+                                        <option value="2">Tarjeta de Credito</option>
                                         
                                     </select>
                                 </div>
@@ -217,7 +220,8 @@
                             </div>
                             </div>
 
-                            <br>
+                            <hr>
+
 
 
                                  <div class="col-md-8">
@@ -255,8 +259,27 @@
       <th scope="row"></th>
       <td></td>
       <td></td>
+      <td>SubTotal:</td>
+    </tr>
+
+<th scope="row"></th>
+      <td></td>
+      <td></td>
       <td>Impuesto:</td>
     </tr>
+
+    <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>Descuento:</td>
+    </tr>
+
+    <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>Total:</td>
+    </tr>
+
   </tbody>
 </table>
                         </div>    
@@ -265,7 +288,7 @@
                     </div>
 
                 </form> 
-    
+   
         <script>
 
         </script>

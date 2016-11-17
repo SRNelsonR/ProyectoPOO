@@ -164,10 +164,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Información<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Sucursales</a>
+                                <a href="Sucursales.php">Sucursales</a>
                             </li>
                             <li>
-                                <a href="morris.html">Descuentos de temporada</a>
+                                <a href="Descuentos.html">Descuentos de temporada</a>
                             </li>
                             <li>
                                 <a href="productos.php">Productos disponibles</a>
@@ -176,7 +176,7 @@
                         <!-- second-level-items -->
                     </li>
                      <li>
-                        <a href="#"><i class="fa fa-table fa-fw"></i>Facturación</a>
+                        <a href="facturacion.php"><i class="fa fa-table fa-fw"></i>Facturación</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i>Consultas</a>
