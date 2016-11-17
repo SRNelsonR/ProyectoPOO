@@ -1,3 +1,5 @@
+  
+
         <!DOCTYPE html>
         <html>
         <head>
@@ -179,10 +181,16 @@
                         </div>
                         <div class="form-group row">
                             <label for="empresa" class="col-md-1 control-label">Cajero</label>
+                             
+                                
                             <div class="col-md-3">
-                                <select class="form-control input-sm" id="id_vendedor">
+                              <select class="form-control input-sm" id="id_vendedor">
+                              
                                     <!--consulta-->
                                 </select>
+                               
+                                  
+                                
                             </div>
                             <label for="tel2" class="col-md-1 control-label">Fecha</label>
                             <div class="col-md-2">
