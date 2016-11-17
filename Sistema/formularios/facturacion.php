@@ -134,14 +134,14 @@
                     
                         
                         <!--factura    -->
-                        <div class="panel panel-default">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                                 Farmacia Max Util ""
                             </div>
                             
                             <div class="row">
                                 <div class="col-xs-5">
-                                    <div class="panel panel-default">
+                                    <div class="panel panel-success">
                                         <div class="panel-heading">
                                         <div class="panel-body">Estamos Ubicados en colonia Loarque ,Centro Comercial Lewis, Local No. 14 <br>
                                         
@@ -219,20 +219,7 @@
                         </div>  
                     </div>
                 </form> 
-                
-            <div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->          
-            </div>
-        </div>      
-              <div class="row-fluid">
-                <div class="col-md-12">
-
-
-
-                    
-                </div>
-            </div>
-        </form>
-
+    
         <script>
 
         </script>
