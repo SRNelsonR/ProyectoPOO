@@ -160,5 +160,13 @@
 			echo '</select>';
 		}
 		
+		public static function ObtenerCodigoCajero($conexion){
+			$resultado = $conexion->ejecutarInstruccion(
+				sprintf("SELECT codigo_tipo_usuario 
+				FROM tbl_empleados")			
+			);
+			
+
+
 	}
 ?>
