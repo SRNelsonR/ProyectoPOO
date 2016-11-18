@@ -101,7 +101,7 @@
                             
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
+                            <a href="../class/forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
                         </li>
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
@@ -145,7 +145,7 @@
                         Ahora: 620.00 lps</p>
                         
                         <p>
-                          <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                          <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                           
                         </p>
 
@@ -162,7 +162,7 @@
                     Ahora:450.00 lps.
                     </p>
                     <p>
-                      <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                      <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                       
                     </p>
                   </div>
@@ -177,7 +177,7 @@
                     <p>Antes:250.00 lps <br>
                     Despues:190.00 lps </p>
                     <p>
-                      <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                      <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                       
                     </p>
                   </div>
@@ -196,7 +196,7 @@
                         <p>Antes: 280.00 lps. <br>
                         Despues: 240.00 lps</p>
                         <p>
-                          <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                          <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                           
                         </p>
 
@@ -212,7 +212,7 @@
                     <p>Antes: 1200.00 lps. <br>
                         Despues: 950.00 lps</p>
                         <p>
-                      <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                      <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                       
                     </p>
                   </div>
@@ -227,7 +227,7 @@
                     <p>Antes: 210.50 lps. <br>
                         Despues: 180.00 lps</p>
                         <p>
-                      <a href="#" class="btn btn-primary" role="button">Facturar</a>
+                      <a href="../class/forms8.php" class="btn btn-primary" role="button">Facturar</a>
                      
                     </p>
                   </div>

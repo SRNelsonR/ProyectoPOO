@@ -113,7 +113,7 @@
 
                             </li>
                             <li>
-                                <a href="class/forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
+                                <a href="forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
                             </li>
                             <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
@@ -183,7 +183,7 @@
                               <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
                               <div class="col-md-3">
 
-                              
+
                                   <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
                                   <input id="id_cliente" type='hidden'> 
                               </div>
@@ -269,26 +269,26 @@
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                       </tr>
                       <tr>
                           <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                       </tr>
                       <tr>
                           <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
+                          <td colspan="2"></td>
+                          <td></td>
                       </tr>
                       <tr>
                           <th scope="row"></th>
                           <td></td>
                           <td></td>
-                          <td>SubTotal:</td>
+                          <td><strong>SubTotal:</strong></td>
                       </tr>
 
                       <th scope="row"></th>
