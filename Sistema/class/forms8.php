@@ -3,9 +3,8 @@
         include_once("class_descuento.php");
         include_once("class_impuesto.php");
         include_once("class_Producto.php");
+        include_once("class_Empleado.php");
         include_once("class_Tipo_Usuario.php");
-        
-    
 
     $conexion = new Conexion();
 ?>
@@ -258,8 +257,8 @@
                           <thead>
                             <tr>
                               <th>Codigo</th>
-                              <th>Cant.</th>
                               <th>Producto</th>
+                              <th>Cant.</th>
                               <th>Precio</th>
                               <th>Precio total</th>
                               <th></th>
@@ -268,21 +267,43 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td > <input type="text" name="txtcodigo" size="3">  </td>
+                          <td width="201"><label for="Select"></label>
+                            <select name="Select" id="Select">
+                              <option>--Seleccionar Producto</option>
+                              <option>Emulsion Scott</option>
+                              <option>Panadol</option>
+                            </select>
+                          </td>
+                          <td > <input type="text" name="txtcantidad" size="3">  </td>
+                           
+                          <td > <input type="text" name="txtprecio" size="3">  </td>
+                         
                       </tr>
                       <tr>
-                          <th scope="row">2</th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td > <input type="text" name="txtcodigo1" size="3">  </td>
+                          <td width="201"><label for="Select"></label>
+                            <select name="Select" id="Select">
+                            <option>--Seleccionar Producto</option>
+                              <option>Emulsion Scott</option>
+                              <option>Panadol</option>
+                            </select>
+                          </td>
+                         <td > <input type="text" name="txtcantidad1" size="3">  </td>
+          
+                          <td > <input type="text" name="precio1" size="3">  </td>
                       </tr>
                       <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2"></td>
-                          <td></td>
+                          <td > <input type="text" name="txtcodigo2" size="3">  </td>
+                         <td width="201"><label for="Select"></label>
+                            <select name="Select" id="Select">
+                            <option>--Seleccionar Producto</option>
+                              <option>Emulsion Scott</option>
+                              <option>Panadol</option>
+                            </select>
+                          </td>
+                          <td > <input type="text" name="txtcantidad2" size="3">  </td>
+                          <td > <input type="text" name="txtcantidad1" size="3">  </td>
                       </tr>
                       <tr>
                           <th scope="row"></th>

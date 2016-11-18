@@ -125,7 +125,7 @@
                 <div class="row">
                     <!-- Page Header -->
                     <div class="col-lg-12">
-                        <h1 class="page-header">FACTURACION</h1>
+                        <h1 class="page-header">SOBRE LA FACTURACION</h1>
                     </div>
                     <!--End Page Header -->
                 </div>
@@ -136,10 +136,25 @@
 
 
                 <!--factura    -->
-                
-<script>
+                <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img class="media-object" src="" alt="...">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Somos una Empresa Responsable por lo tanto es deber de nuestros empleados dar factura a nuestros clientes para posteriores reclamos  </h4>
 
-</script>
+             <h4 class="media-heading"> Nuestros clientes podran efectuar cambios en sus medicamentos y productos bajos las siguientes condiciones:</h4> <br>
+             <h5 class="media-heading"> 1. Producto vencido proximo a vencer.<br>
+             2.Medicamentos en descompocision.
+             3. </h5>   
+            ...
+          </div>
+        </div>
+        <script>
+
+        </script>
 
 
 
