@@ -182,6 +182,8 @@
                             <div class="form-group row">
                               <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
                               <div class="col-md-3">
+
+                              
                                   <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
                                   <input id="id_cliente" type='hidden'> 
                               </div>

@@ -134,4 +134,18 @@
 			echo '<input disabled="disabled" class="form-control" placeholder="Codigo del Cliente" value="'.$codigoA.'" id="txt-codigo-cliente">';
 			}
 	}
+
+
+			
+	}
+
+
+
+
+
+
+
+
+
+
 ?>
