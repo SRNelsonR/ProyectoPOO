@@ -136,22 +136,27 @@
 
 
                 <!--factura    -->
-                <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object" src="" alt="...">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Somos una Empresa Responsable por lo tanto es deber de nuestros empleados dar factura a nuestros clientes para posteriores reclamos  </h4>
+         <div class="panel panel-warning">
+                    <div class="panel-heading">
+                     <Strong><h4> Somos una empresa Responsable con nuestros clientes, es por eso que todos nuestros empleados estan en el deber de entregar factura a cada cliente que realize una compra por minima que sea.<Strong></h4>
 
-             <h4 class="media-heading"> Nuestros clientes podran efectuar cambios en sus medicamentos y productos bajos las siguientes condiciones:</h4> <br>
-             <h5 class="media-heading"> 1. Producto vencido proximo a vencer.<br>
-             2.Medicamentos en descompocision.
-             3. </h5>   
-            ...
-          </div>
-        </div>
+                      </div> 
+                      </div> 
+
+                      <div class="panel panel-info">
+                    <div class="panel-heading">
+                    <Strong><h4>Todo Cliente que presente algun tipo de problema en sus medicamento o productos comprados en nuestras farmacias, tendran derecho a realizar un cambio si presentan algun defecto de los siguientes:</Strong></h4><br>
+                   <Strong> 1.Empaques abiertos.<br>
+                    2. Frascos abierto y sin proteccion despues de la tapa.<br>
+                    3. Medicamentos y productos vencidos.<br>
+                    4. Medicamentos prontos a vencer es decir desde la fecha de compra a un mes de vencer.<br>
+                    5. Tambien otros casos a considerar segun criterio del Administrador.</Strong> <br>
+
+
+
+
+
+
         <script>
 
         </script>
