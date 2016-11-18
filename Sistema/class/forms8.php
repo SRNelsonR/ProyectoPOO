@@ -3,8 +3,9 @@
         include_once("class_descuento.php");
         include_once("class_impuesto.php");
         include_once("class_Producto.php");
-        include_once("class_Empleado.php");
         include_once("class_Tipo_Usuario.php");
+        
+    
 
     $conexion = new Conexion();
 ?>
