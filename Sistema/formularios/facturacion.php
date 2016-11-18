@@ -85,7 +85,7 @@
                                 <!--end search section-->
                             </li>
                             <li class="selected">
-                                <a href="cajero.php  ?>"><i class="fa fa-dashboard fa-fw"></i>INICIO</a>
+                                <a href="cajero.php"><i class="fa fa-dashboard fa-fw"></i>INICIO</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> INFORMACION<span class="fa arrow"></span></a>
@@ -103,7 +103,7 @@
 
                             </li>
                             <li>
-                                <a href="tables.html"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
+                                <a href="../class/forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
                             </li>
                             <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
@@ -136,168 +136,7 @@
 
 
                 <!--factura    -->
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-
-                        <a  href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-5">
-                            <div class="panel panel-success">
-                                <div class="panel-heading">
-                                    <div class="panel-body">Farmacia MaxUtil <br>
-                                        Estamos Ubicados en colonia Loarque ,Centro Comercial Lewis, Local No. 14 <br>
-                                        
-                                        Telefonos: 2258-6988, 2258-9685
-
-
-                                    </div>
-                                </div>
-
-                            </div>                                        
-
-
-
-                        </div>
-                        <!-- / fin de sección de datos de farmacia  -->
-
-                        <form class="form-horizontal" role="form" id="datos_factura">
-                            <div class="form-group row">
-                              <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
-                              <div class="col-md-3">
-                                  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
-                                  <input id="id_cliente" type='hidden'> 
-                              </div>
-                              <label for="tel1" class="col-md-1 control-label">Teléfono</label>
-                              <div class="col-md-2">
-                                <input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" readonly>
-                            </div>
-                            <label for="mail" class="col-md-1 control-label">Email</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="empresa" class="col-md-1 control-label">Cajero</label>
-                             
-                                
-                            <div class="col-md-3">
-                              <select class="form-control input-sm" id="id_vendedor">
-                              
-                                    <!--consulta-->
-                                </select>
-                               
-                                  
-                                
-                            </div>
-                            <label for="tel2" class="col-md-1 control-label">Fecha</label>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
-                            </div>
-                            <label for="email" class="col-md-1 control-label">Pago</label>
-                            <div class="col-md-3">
-                                <select class='form-control input-sm' id="condiciones">
-                                    <option value="1">Efectivo</option>
-                                    <option value="2">Tarjeta de Credito</option>
-
-                                </select>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-12">
-                            <div class="pull-right">
-                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoCliente">
-                                   <span class="glyphicon glyphicon-user"></span> Nuevo cliente
-                               </button>
-                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                                   <span class="glyphicon glyphicon-search"></span> Agregar productos
-                               </button>
-                               <button type="submit" class="btn btn-default">
-                                  <span class="glyphicon glyphicon-print"></span> Imprimir
-                              </button>
-                              <button type="submit" class="btn btn-default">
-                                <span class="glyphicon glyphicon-edit"></span> Editar
-
-                            </button>
-                            <button type="submit" class="btn btn-default">
-                                <span class="glyphicon glyphicon-remove"></span> Salir  
-                            </button>
-                        </div>
-                    </div>
-
-                    <hr>
-
-
-
-                    <div class="col-md-8">
-
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Codigo</th>
-                              <th>Cant.</th>
-                              <th>Producto</th>
-                              <th>Precio</th>
-                              <th>Precio total</th>
-                              <th></th>
-                              <th></th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                      </tr>
-                      <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                      </tr>
-                      <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                      </tr>
-                      <tr>
-                          <th scope="row"></th>
-                          <td></td>
-                          <td></td>
-                          <td>SubTotal:</td>
-                      </tr>
-
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td><strong>Impuesto:</strong></td>
-                  </tr>
-
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td><strong>Descuento:</strong></td>
-              </tr>
-
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td><strong>Total: </strong></td>
-          </tr>
-
-      </tbody>
-  </table>
-</div>    
-</div>
-
-</div>
-
-</form> 
-
+                
 <script>
 
 </script>

@@ -83,7 +83,7 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="cajero.php  ?>"><i class="fa fa-dashboard fa-fw"></i>INICIO</a>
+                        <a href="cajero.php"><i class="fa fa-dashboard fa-fw"></i>INICIO</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> INFORMACION<span class="fa arrow"></span></a>
@@ -98,7 +98,7 @@
                         
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
+                        <a href="facturacion.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
