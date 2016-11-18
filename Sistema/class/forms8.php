@@ -270,41 +270,52 @@
                         <tr>
                           <td > <input type="text" name="txtcodigo" size="3">  </td>
                           <td width="201"><label for="Select"></label>
-                            <select name="Select" id="Select">
+                            <select name="lista1" id="Select">
                               <option>--Seleccionar Producto</option>
                               <option>Emulsion Scott</option>
                               <option>Panadol</option>
                             </select>
                           </td>
+
+                          if
                           <td > <input type="text" name="txtcantidad" size="3">  </td>
                            
                           <td > <input type="text" name="txtprecio" size="3">  </td>
                          
                       </tr>
+                     
+
                       <tr>
                           <td > <input type="text" name="txtcodigo1" size="3">  </td>
                           <td width="201"><label for="Select"></label>
-                            <select name="Select" id="Select">
+                            <select name="lista1" id="Select">
                             <option>--Seleccionar Producto</option>
                               <option>Emulsion Scott</option>
                               <option>Panadol</option>
                             </select>
                           </td>
-                         <td > <input type="text" name="txtcantidad1" size="3">  </td>
+                          <td > <input type="text" name="txtcantidad1" size="3">  </td>
           
                           <td > <input type="text" name="precio1" size="3">  </td>
                       </tr>
+
+
+
+
+
+
                       <tr>
                           <td > <input type="text" name="txtcodigo2" size="3">  </td>
                          <td width="201"><label for="Select"></label>
-                            <select name="Select" id="Select">
+                            <select name="lista1" id="Select">
                             <option>--Seleccionar Producto</option>
                               <option>Emulsion Scott</option>
                               <option>Panadol</option>
                             </select>
-                          </td>
+                          </td> 
                           <td > <input type="text" name="txtcantidad2" size="3">  </td>
-                          <td > <input type="text" name="txtcantidad1" size="3">  </td>
+                            <td > <input type="text" name="precio2" size="3">  </td>
+                         
                       </tr>
                       <tr>
                           <th scope="row"></th>
@@ -329,8 +340,9 @@
               <td></td>
               <td></td>
               <td><strong>Total: </strong></td>
+              <td><input type="submit" name="btnfactura" id="button" value="Facturar"> </td>
           </tr>
-
+        
       </tbody>
   </table>
 </div>    
