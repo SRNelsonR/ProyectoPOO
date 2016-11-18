@@ -350,29 +350,7 @@
 
             </div>
 
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="well">
-                        <!-- Notifications-->
-                        
-                        <!--End Notifications-->
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="well">
-                        <!-- Donut Example-->
-
-                        <!--End Donut Example-->
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="well">
-                        <!-- Chat Panel Example-->
-                        
-                        <!--End Chat Panel Example-->
-                    </div>
-                </div>
-            </div>
+            
 
 
          
@@ -383,12 +361,7 @@
 
     </div>
     <!-- end wrapper -->
-    <br>
-    <div class="row">
-
-        <div id="div-mostrar-productos1" class="well">
-            
-        </div>
+    
 
     </div><br><br>
 

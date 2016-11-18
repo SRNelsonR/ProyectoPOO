@@ -138,7 +138,7 @@
                             <!--end search section-->
                         </li>
                         <li class="selected">
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                            <a href="Cajero.php"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> INFORMACION<span class="fa arrow"></span></a>
