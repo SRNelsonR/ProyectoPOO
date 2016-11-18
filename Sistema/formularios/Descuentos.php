@@ -103,9 +103,7 @@
                         <li>
                             <a href="../class/forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
                         </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
-                        </li>
+                       
                         
                             <!-- second-level-items -->
                         </li>

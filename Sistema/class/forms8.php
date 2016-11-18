@@ -113,7 +113,7 @@
 
                             </li>
                             <li>
-                                <a href="forms8.php"><i class="fa fa-table fa-fw"></i>FACTURACION</a>
+                                <a href="forms8.php"><i class="fa fa-table fa-fw"></i>GENERAR FACTURA</a>
                             </li>
                             <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i>CONSULTAS</a>
